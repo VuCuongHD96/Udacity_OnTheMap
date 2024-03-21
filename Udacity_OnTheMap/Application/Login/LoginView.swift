@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  LoginView.swift
 //  Udacity_OnTheMap
 //
 //  Created by Work on 21/03/2024.
@@ -7,7 +7,12 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct LoginView: View {
+    
+    init(viewModel: LoginViewModel) {
+        
+    }
+    
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -20,5 +25,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    LoginView(viewModel: LoginViewModel())
 }

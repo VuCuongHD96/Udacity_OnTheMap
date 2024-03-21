@@ -7,18 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		96D785682BAC1D790037248C /* Udacity_OnTheMapApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D785672BAC1D790037248C /* Udacity_OnTheMapApp.swift */; };
-		96D7856A2BAC1D790037248C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D785692BAC1D790037248C /* ContentView.swift */; };
+		96D7856A2BAC1D790037248C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D785692BAC1D790037248C /* LoginView.swift */; };
 		96D7856C2BAC1D7C0037248C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96D7856B2BAC1D7C0037248C /* Assets.xcassets */; };
 		96D7856F2BAC1D7C0037248C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96D7856E2BAC1D7C0037248C /* Preview Assets.xcassets */; };
+		96D785782BAC21B80037248C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D785772BAC21B80037248C /* AppDelegate.swift */; };
+		96D7857A2BAC21CA0037248C /* AppNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D785792BAC21CA0037248C /* AppNavigator.swift */; };
+		96D7857C2BAC21F40037248C /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D7857B2BAC21F40037248C /* AppViewModel.swift */; };
+		96D7857F2BAC23200037248C /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D7857E2BAC23200037248C /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		96D785642BAC1D790037248C /* Udacity_OnTheMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Udacity_OnTheMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		96D785672BAC1D790037248C /* Udacity_OnTheMapApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Udacity_OnTheMapApp.swift; sourceTree = "<group>"; };
-		96D785692BAC1D790037248C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		96D785692BAC1D790037248C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		96D7856B2BAC1D7C0037248C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96D7856E2BAC1D7C0037248C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		96D785772BAC21B80037248C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		96D785792BAC21CA0037248C /* AppNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigator.swift; sourceTree = "<group>"; };
+		96D7857B2BAC21F40037248C /* AppViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewModel.swift; sourceTree = "<group>"; };
+		96D7857E2BAC23200037248C /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +57,7 @@
 		96D785662BAC1D790037248C /* Udacity_OnTheMap */ = {
 			isa = PBXGroup;
 			children = (
-				96D785672BAC1D790037248C /* Udacity_OnTheMapApp.swift */,
-				96D785692BAC1D790037248C /* ContentView.swift */,
+				96D785752BAC21540037248C /* Application */,
 				96D7856B2BAC1D7C0037248C /* Assets.xcassets */,
 				96D7856D2BAC1D7C0037248C /* Preview Content */,
 			);
@@ -65,6 +70,34 @@
 				96D7856E2BAC1D7C0037248C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		96D785752BAC21540037248C /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				96D7857D2BAC221F0037248C /* Login */,
+				96D785762BAC215E0037248C /* App */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		96D785762BAC215E0037248C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				96D785772BAC21B80037248C /* AppDelegate.swift */,
+				96D7857B2BAC21F40037248C /* AppViewModel.swift */,
+				96D785792BAC21CA0037248C /* AppNavigator.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		96D7857D2BAC221F0037248C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				96D785692BAC1D790037248C /* LoginView.swift */,
+				96D7857E2BAC23200037248C /* LoginViewModel.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +170,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96D7856A2BAC1D790037248C /* ContentView.swift in Sources */,
-				96D785682BAC1D790037248C /* Udacity_OnTheMapApp.swift in Sources */,
+				96D7857C2BAC21F40037248C /* AppViewModel.swift in Sources */,
+				96D785782BAC21B80037248C /* AppDelegate.swift in Sources */,
+				96D7857A2BAC21CA0037248C /* AppNavigator.swift in Sources */,
+				96D7857F2BAC23200037248C /* LoginViewModel.swift in Sources */,
+				96D7856A2BAC1D790037248C /* LoginView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,7 +311,6 @@
 				DEVELOPMENT_TEAM = GCAT449K7M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -287,9 +322,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "cuong.ios.Udacity-OnTheMap";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -304,7 +343,6 @@
 				DEVELOPMENT_TEAM = GCAT449K7M;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -316,9 +354,13 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "cuong.ios.Udacity-OnTheMap";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
