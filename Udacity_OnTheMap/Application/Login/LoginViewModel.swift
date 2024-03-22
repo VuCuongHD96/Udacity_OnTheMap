@@ -10,6 +10,7 @@ import Combine
 struct LoginViewModel {
     
     let useCase: UserUseCaseType
+    let navigator: LoginNavigatorType
 }
 
 extension LoginViewModel: ViewModel {
@@ -46,26 +47,20 @@ extension LoginViewModel: ViewModel {
             .assign(to: \.loginIsValid, on: output)
             .store(in: cancelBag)
         
-        Publishers.CombineLatest4(input.loginAction, 
-                                  output.$loginIsValid,
-                                  input.$emailValue,
-                                  input.$passwordValue)
-            .filter { _, loginIsValid, _, _ in
-                return loginIsValid
-            }
-            .map { _, _, email, password in
-                return UserData(email: email, password: password)
-            }
-            .flatMap { userLoginInfo in
-                useCase.login(user: userLoginInfo)
-                    .asDriver()
-                    .trackError(errorTracker)
-                    .trackActivity(activityTracker)
-            }
-            .sink(receiveValue: { _ in
-                print("--- debug --- goto main screen")
-            })
-            .store(in: cancelBag)
+        input.loginAction
+        .map { _ in
+            return UserData(email: input.emailValue, password: input.passwordValue)
+        }
+        .flatMap { userLoginInfo in
+            useCase.login(user: userLoginInfo)
+                .asDriver()
+                .trackError(errorTracker)
+                .trackActivity(activityTracker)
+        }
+        .sink(receiveValue: { _ in
+            navigator.toMapListScreen()
+        })
+        .store(in: cancelBag)
         
         return output
     }

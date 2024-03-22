@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		9652CDD32BAC850200D49652 /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9652CDD22BAC850200D49652 /* EmailTextField.swift */; };
 		9652CDD52BAC851F00D49652 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9652CDD42BAC851F00D49652 /* PasswordTextField.swift */; };
+		96622E2A2BAD8E2F00686AA5 /* MapListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96622E292BAD8E2F00686AA5 /* MapListView.swift */; };
 		96901D2F2BAD23EC0094CF2D /* MemeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96901D2E2BAD23EC0094CF2D /* MemeTextField.swift */; };
 		96901D312BAD305F0094CF2D /* LoginNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96901D302BAD305F0094CF2D /* LoginNavigator.swift */; };
 		96901D332BAD306C0094CF2D /* UserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96901D322BAD306C0094CF2D /* UserUseCase.swift */; };
 		96901D352BAD30AB0094CF2D /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96901D342BAD30AB0094CF2D /* LoginRequest.swift */; };
 		96901D372BAD320E0094CF2D /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96901D362BAD320E0094CF2D /* UserRepository.swift */; };
 		96901D392BAD32E30094CF2D /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96901D382BAD32E30094CF2D /* LoginResponse.swift */; };
-		96901D3C2BAD38F40094CF2D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96901D3B2BAD38F40094CF2D /* User.swift */; };
 		96D7856A2BAC1D790037248C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D785692BAC1D790037248C /* LoginView.swift */; };
 		96D7856C2BAC1D7C0037248C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96D7856B2BAC1D7C0037248C /* Assets.xcassets */; };
 		96D7856F2BAC1D7C0037248C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96D7856E2BAC1D7C0037248C /* Preview Assets.xcassets */; };
@@ -44,13 +44,13 @@
 /* Begin PBXFileReference section */
 		9652CDD22BAC850200D49652 /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
 		9652CDD42BAC851F00D49652 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
+		96622E292BAD8E2F00686AA5 /* MapListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapListView.swift; sourceTree = "<group>"; };
 		96901D2E2BAD23EC0094CF2D /* MemeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeTextField.swift; sourceTree = "<group>"; };
 		96901D302BAD305F0094CF2D /* LoginNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNavigator.swift; sourceTree = "<group>"; };
 		96901D322BAD306C0094CF2D /* UserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUseCase.swift; sourceTree = "<group>"; };
 		96901D342BAD30AB0094CF2D /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		96901D362BAD320E0094CF2D /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		96901D382BAD32E30094CF2D /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
-		96901D3B2BAD38F40094CF2D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		96D785642BAC1D790037248C /* Udacity_OnTheMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Udacity_OnTheMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96D785692BAC1D790037248C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		96D7856B2BAC1D7C0037248C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -88,6 +88,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		96622E282BAD8E1100686AA5 /* MapListView */ = {
+			isa = PBXGroup;
+			children = (
+				96622E292BAD8E2F00686AA5 /* MapListView.swift */,
+			);
+			path = MapListView;
+			sourceTree = "<group>";
+		};
 		96901D2D2BAD23CF0094CF2D /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
@@ -99,7 +107,6 @@
 		96901D3A2BAD38C50094CF2D /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				96901D3B2BAD38F40094CF2D /* User.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -145,6 +152,7 @@
 		96D785752BAC21540037248C /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				96622E282BAD8E1100686AA5 /* MapListView */,
 				96901D2D2BAD23CF0094CF2D /* CustomView */,
 				96D7857D2BAC221F0037248C /* Login */,
 				96D785762BAC215E0037248C /* App */,
@@ -341,7 +349,6 @@
 				96D785782BAC21B80037248C /* AppDelegate.swift in Sources */,
 				96901D312BAD305F0094CF2D /* LoginNavigator.swift in Sources */,
 				96901D392BAD32E30094CF2D /* LoginResponse.swift in Sources */,
-				96901D3C2BAD38F40094CF2D /* User.swift in Sources */,
 				96D785AC2BAC29660037248C /* BaseError.swift in Sources */,
 				96D785B52BAC29F60037248C /* ErrorTracker.swift in Sources */,
 				96D785B82BAC29F60037248C /* ActivityTracker.swift in Sources */,
@@ -363,6 +370,7 @@
 				96D785AB2BAC29660037248C /* DecodingError.swift in Sources */,
 				96D785B42BAC29F60037248C /* CancelBag.swift in Sources */,
 				96D7859D2BAC29660037248C /* ServiceBaseRequest.swift in Sources */,
+				96622E2A2BAD8E2F00686AA5 /* MapListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
