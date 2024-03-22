@@ -14,7 +14,7 @@ enum FocusField {
 
 struct LoginView: View {
     
-   @ObservedObject var input: LoginViewModel.Input
+    @ObservedObject var input: LoginViewModel.Input
     let output: LoginViewModel.Output
     let cancelBag = CancelBag()
     
@@ -32,18 +32,18 @@ struct LoginView: View {
             EmailTextField(emailValue: $input.emailValue)
             PasswordTextField(passwordValue: $input.passwordValue)
             Button(action: {
-                print("Login")
+                input.loginAction.send()
             }, label: {
                 Text("LOGIN")
                     .foregroundColor(.white)
                     .fontWeight(.medium)
                     .frame(maxWidth: .infinity, maxHeight: 50)
-                    .background(Color.blue)
+                    .background(output.loginIsValid ? Color.blue : Color.red)
                     .cornerRadius(8)
             })
+            .allowsHitTesting(output.loginIsValid)
             Text("Don't have an account?")
             Button("Sign up") {
-                
             }
         }
         .padding()
@@ -52,5 +52,8 @@ struct LoginView: View {
 }
 
 #Preview {
-    LoginView(viewModel: LoginViewModel())
+    let repository = UserRepository(api: .share)
+    let useCase = UserUseCase(userRepository: repository)
+    let viewModel = LoginViewModel(useCase: useCase)
+    return LoginView(viewModel: viewModel)
 }
