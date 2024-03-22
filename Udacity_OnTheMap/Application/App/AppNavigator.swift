@@ -17,11 +17,12 @@ struct AppNavigator: AppNavigatorType {
     unowned let window: UIWindow!
     
     func toMainView() {
-        let navigationController = UINavigationController()
-        let viewModel = LoginViewModel()
+        let repository = UserRepository(api: .share)
+        let useCase = UserUseCase(userRepository: repository)
+        let viewModel = LoginViewModel(useCase: useCase)
         let loginView = LoginView(viewModel: viewModel)
         let viewController = UIHostingController(rootView: loginView)
-        navigationController.viewControllers = [viewController]
+        let navigationController = UINavigationController(rootViewController: viewController)
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
     }

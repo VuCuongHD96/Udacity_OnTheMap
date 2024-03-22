@@ -15,8 +15,8 @@ struct APIService {
     
     init() {
         let configuration = URLSessionConfiguration.default
-        configuration.timeoutIntervalForRequest = 30
-        configuration.timeoutIntervalForResource = 30
+        configuration.timeoutIntervalForRequest = 5
+        configuration.timeoutIntervalForResource = 5
         session = URLSession(configuration: configuration)
     }
     
@@ -24,14 +24,23 @@ struct APIService {
         guard let url = input.url else {
             return Fail(error: BaseError.redirectionError).eraseToAnyPublisher()
         }
-        
+        var urlRequest = URLRequest(url: url)
+        urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
+//        let body = "{\"udacity\": {\"username\": \"\("cuongvx4@fpt.com")\", \"password\": \"\("Fpthoalacpro@2024")\"}}"
+
+//        urlRequest.httpBody = body.data(using: .utf8)
+                urlRequest.httpBody = input.httpBody
+        urlRequest.httpMethod = input.requestType.rawValue
+
+
         return session
-            .dataTaskPublisher(for: url)
+            .dataTaskPublisher(for: urlRequest)
             .subscribe(on: DispatchQueue.global())
             .tryMap { data, response in
                 print("\n------------REQUEST INPUT")
                 print("Link: %@", input.urlString)
-                print("Body: %@", input.body)
+                print("Body: %@", input.httpBody ?? Data())
+                print("Params: %@", input.params)
                 print("------------ END REQUEST INPUT\n")
                 guard let statusCode = (response as? HTTPURLResponse)?.statusCode else {
                     throw BaseError.redirectionError
