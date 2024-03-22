@@ -6,7 +6,6 @@
 //
 
 import Combine
-import UIKit
 
 public typealias ActivityTracker = CurrentValueSubject<Bool, Never>
 
