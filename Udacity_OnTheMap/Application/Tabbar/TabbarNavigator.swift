@@ -9,6 +9,7 @@ import SwiftUI
 
 protocol TabbarNavigatorType {
     func createLocationListScreen() -> UIViewController
+    func popBack()
 }
 
 struct TabbarNavigator: TabbarNavigatorType {
@@ -27,5 +28,9 @@ struct TabbarNavigator: TabbarNavigatorType {
         let locationListViewController = UIHostingController(rootView: locationListView)
         locationListViewController.tabBarItem = createLocationListTabbarItem()
         return locationListViewController
+    }
+    
+    func popBack() {
+        navigationController.popViewController(animated: true)
     }
 }

@@ -43,6 +43,8 @@
 		96D785B92BAC29F60037248C /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D785B32BAC29F60037248C /* Observable.swift */; };
 		96D785BE2BAC2A1E0037248C /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D785BB2BAC2A1E0037248C /* Screen.swift */; };
 		96D785C02BAC2A1E0037248C /* DictionaryPrinter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D785BD2BAC2A1E0037248C /* DictionaryPrinter.swift */; };
+		96F2722B2BB1C3E800865316 /* LogoutRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F2722A2BB1C3E800865316 /* LogoutRequest.swift */; };
+		96F2722D2BB1C40E00865316 /* LogoutResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F2722C2BB1C40E00865316 /* LogoutResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +85,8 @@
 		96D785B32BAC29F60037248C /* Observable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		96D785BB2BAC2A1E0037248C /* Screen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 		96D785BD2BAC2A1E0037248C /* DictionaryPrinter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryPrinter.swift; sourceTree = "<group>"; };
+		96F2722A2BB1C3E800865316 /* LogoutRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutRequest.swift; sourceTree = "<group>"; };
+		96F2722C2BB1C40E00865316 /* LogoutResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				96901D382BAD32E30094CF2D /* LoginResponse.swift */,
+				96F2722C2BB1C40E00865316 /* LogoutResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -256,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				96901D342BAD30AB0094CF2D /* LoginRequest.swift */,
+				96F2722A2BB1C3E800865316 /* LogoutRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -366,6 +372,7 @@
 				96D785B92BAC29F60037248C /* Observable.swift in Sources */,
 				96D7859E2BAC29660037248C /* HTTPStatusCode.swift in Sources */,
 				9652CDD32BAC850200D49652 /* EmailTextField.swift in Sources */,
+				96F2722D2BB1C40E00865316 /* LogoutResponse.swift in Sources */,
 				9640B53B2BB165A2009FBA7F /* TabbarNavigator.swift in Sources */,
 				96D7857C2BAC21F40037248C /* AppViewModel.swift in Sources */,
 				96D785782BAC21B80037248C /* AppDelegate.swift in Sources */,
@@ -395,6 +402,7 @@
 				96D785B42BAC29F60037248C /* CancelBag.swift in Sources */,
 				96D7859D2BAC29660037248C /* ServiceBaseRequest.swift in Sources */,
 				96622E2A2BAD8E2F00686AA5 /* LocationListView.swift in Sources */,
+				96F2722B2BB1C3E800865316 /* LogoutRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,6 +9,7 @@ import Foundation
 
 protocol UserUseCaseType {
     func login(user: UserData) -> Observable<Void>
+    func logout() -> Observable<Void>
 }
 
 struct UserUseCase: UserUseCaseType {
@@ -17,5 +18,9 @@ struct UserUseCase: UserUseCaseType {
     
     func login(user: UserData) -> Observable<Void> {
         return userRepository.login(user: user)
+    }
+    
+    func logout() -> Observable<Void> {
+        return userRepository.logout()
     }
 }

@@ -13,13 +13,17 @@ protocol TabbarViewModelType {
     typealias Listener = (TabbarViewModelType) -> Void
     
     // MARK: - Property
-    var dataDidChange: Listener? { get }
+    var dataDidChange: Listener? { get set }
     var viewControllers: [UIViewController] { get }
+    func showScreen()
+    func logoutAction()
 }
 
-final class TabbarViewModel: TabbarViewModelType {
+final class TabbarViewModel {
     
     let navigator: TabbarNavigatorType
+    let userUseCase: UserUseCaseType
+    let cancelBag: CancelBag
     
     var dataDidChange: Listener?
     var viewControllers = [UIViewController]() {
@@ -28,15 +32,29 @@ final class TabbarViewModel: TabbarViewModelType {
         }
     }
     
-    init(navigator: TabbarNavigatorType) {
+    init(navigator: TabbarNavigatorType, userUseCase: UserUseCaseType, cancelBag: CancelBag) {
         self.navigator = navigator
+        self.userUseCase = userUseCase
+        self.cancelBag = cancelBag
     }
 }
 
-extension TabbarViewModel {
+extension TabbarViewModel: TabbarViewModelType {
     
     func showScreen() {
         let locationListScreen = navigator.createLocationListScreen()
         viewControllers = [locationListScreen]
+    }
+    
+    func logoutAction() {
+        userUseCase.logout()
+            .sink(receiveCompletion: { completion in
+                if case let .failure(error) = completion {
+                    print("--- debug --- error = ", error)
+                }
+            }, receiveValue: { _ in
+                self.navigator.popBack()
+            })
+            .store(in: cancelBag)
     }
 }
