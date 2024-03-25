@@ -17,4 +17,5 @@ struct HTTPMethod {
     
     static let get = HTTPMethod(rawValue: "get")
     static let post = HTTPMethod(rawValue: "post")
+    static let delete = HTTPMethod(rawValue: "delete")
 }

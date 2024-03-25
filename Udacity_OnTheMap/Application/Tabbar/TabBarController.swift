@@ -11,7 +11,7 @@ import SwiftUI
 class TabBarController: UITabBarController {
     
     // MARK: - Property
-    var viewModel: TabbarViewModel! {
+    var viewModel: TabbarViewModelType! {
         didSet {
             viewModel.dataDidChange = { [unowned self] _ in
                 bindViewModel()
@@ -33,7 +33,10 @@ class TabBarController: UITabBarController {
             return
         }
         let navigator = TabbarNavigator(navigationController: navigationController)
-        viewModel = TabbarViewModel(navigator: navigator)
+        let userRepository = UserRepository(api: .share)
+        let userUseCase = UserUseCase(userRepository: userRepository)
+        let cancelBag = CancelBag()
+        viewModel = TabbarViewModel(navigator: navigator, userUseCase: userUseCase, cancelBag: cancelBag)
         viewModel.showScreen()
     }
     
@@ -57,7 +60,7 @@ class TabBarController: UITabBarController {
     }
     
     @objc private func logoutAction() {
-        
+        viewModel.logoutAction()
     }
     
     @objc private func addAction() {

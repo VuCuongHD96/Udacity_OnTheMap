@@ -7,16 +7,16 @@
 
 import Foundation
 
-struct Account: Codable {
+struct AccountEntity: Codable {
     let registered: Bool
     let key: String
 }
 
-struct Session: Codable {
+struct SessionEntity: Codable {
     let id: String
 }
 
 struct LoginResponse: Codable {
-    let account: Account
-    let session: Session
+    let account: AccountEntity
+    let session: SessionEntity
 }
