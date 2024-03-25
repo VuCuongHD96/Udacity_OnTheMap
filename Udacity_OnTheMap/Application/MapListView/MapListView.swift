@@ -8,8 +8,22 @@
 import SwiftUI
 
 struct MapListView: View {
+    
+    let locationArray = [
+        "America",
+        "Japan",
+        "Viet Nam"
+    ]
+    
     var body: some View {
-        Text("Hello, World!")
+        List(locationArray, id: \.self) { item in
+            HStack {
+                Image(systemName: "heart.fill")
+                Text(item)
+            }
+            .listRowSeparator(.visible)
+        }
+        .listStyle(.inset)
     }
 }
 

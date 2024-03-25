@@ -12,6 +12,7 @@
 		96622E2A2BAD8E2F00686AA5 /* MapListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96622E292BAD8E2F00686AA5 /* MapListView.swift */; };
 		966CBEF72BB12B5900D6112F /* AccountEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966CBEF62BB12B5900D6112F /* AccountEntity.swift */; };
 		966CBEF92BB12B7200D6112F /* SessionEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966CBEF82BB12B7200D6112F /* SessionEntity.swift */; };
+		966CBEFC2BB15BF300D6112F /* StudentLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966CBEFB2BB15BF300D6112F /* StudentLocation.swift */; };
 		96901D2F2BAD23EC0094CF2D /* MemeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96901D2E2BAD23EC0094CF2D /* MemeTextField.swift */; };
 		96901D312BAD305F0094CF2D /* LoginNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96901D302BAD305F0094CF2D /* LoginNavigator.swift */; };
 		96901D332BAD306C0094CF2D /* UserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96901D322BAD306C0094CF2D /* UserUseCase.swift */; };
@@ -49,6 +50,7 @@
 		96622E292BAD8E2F00686AA5 /* MapListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapListView.swift; sourceTree = "<group>"; };
 		966CBEF62BB12B5900D6112F /* AccountEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AccountEntity.swift; path = Udacity_OnTheMap/Application/CustomView/AccountEntity.swift; sourceTree = SOURCE_ROOT; };
 		966CBEF82BB12B7200D6112F /* SessionEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SessionEntity.swift; path = Udacity_OnTheMap/Application/CustomView/SessionEntity.swift; sourceTree = SOURCE_ROOT; };
+		966CBEFB2BB15BF300D6112F /* StudentLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLocation.swift; sourceTree = "<group>"; };
 		96901D2E2BAD23EC0094CF2D /* MemeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeTextField.swift; sourceTree = "<group>"; };
 		96901D302BAD305F0094CF2D /* LoginNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNavigator.swift; sourceTree = "<group>"; };
 		96901D322BAD306C0094CF2D /* UserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUseCase.swift; sourceTree = "<group>"; };
@@ -100,6 +102,14 @@
 			path = MapListView;
 			sourceTree = "<group>";
 		};
+		966CBEFA2BB15BE800D6112F /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				966CBEFB2BB15BF300D6112F /* StudentLocation.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
 		96901D2D2BAD23CF0094CF2D /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +147,7 @@
 		96D785662BAC1D790037248C /* Udacity_OnTheMap */ = {
 			isa = PBXGroup;
 			children = (
+				966CBEFA2BB15BE800D6112F /* Domain */,
 				96D785BA2BAC2A1E0037248C /* Util */,
 				96D785AD2BAC29F60037248C /* Architecture */,
 				96D785802BAC29660037248C /* Platform */,
@@ -360,6 +371,7 @@
 				96D785B52BAC29F60037248C /* ErrorTracker.swift in Sources */,
 				96D785B82BAC29F60037248C /* ActivityTracker.swift in Sources */,
 				96D7859F2BAC29660037248C /* URLs.swift in Sources */,
+				966CBEFC2BB15BF300D6112F /* StudentLocation.swift in Sources */,
 				9652CDD52BAC851F00D49652 /* PasswordTextField.swift in Sources */,
 				96901D332BAD306C0094CF2D /* UserUseCase.swift in Sources */,
 				96D785B62BAC29F60037248C /* ViewModel.swift in Sources */,
