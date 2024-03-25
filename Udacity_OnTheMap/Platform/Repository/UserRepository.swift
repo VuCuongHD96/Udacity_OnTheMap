@@ -17,6 +17,7 @@ class UserRepository: ServiceBaseRepository, UserRepositoryType {
         let request = LoginRequest(user: user)
         return api.request(input: request)
             .map { (data: LoginResponse) in
+                print("--- debug --- LoginResponse = ", data)
                 return Void()
             }
             .eraseToAnyPublisher()

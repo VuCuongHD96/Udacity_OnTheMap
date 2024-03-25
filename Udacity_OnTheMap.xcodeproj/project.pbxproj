@@ -10,6 +10,8 @@
 		9652CDD32BAC850200D49652 /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9652CDD22BAC850200D49652 /* EmailTextField.swift */; };
 		9652CDD52BAC851F00D49652 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9652CDD42BAC851F00D49652 /* PasswordTextField.swift */; };
 		96622E2A2BAD8E2F00686AA5 /* MapListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96622E292BAD8E2F00686AA5 /* MapListView.swift */; };
+		966CBEF72BB12B5900D6112F /* AccountEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966CBEF62BB12B5900D6112F /* AccountEntity.swift */; };
+		966CBEF92BB12B7200D6112F /* SessionEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966CBEF82BB12B7200D6112F /* SessionEntity.swift */; };
 		96901D2F2BAD23EC0094CF2D /* MemeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96901D2E2BAD23EC0094CF2D /* MemeTextField.swift */; };
 		96901D312BAD305F0094CF2D /* LoginNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96901D302BAD305F0094CF2D /* LoginNavigator.swift */; };
 		96901D332BAD306C0094CF2D /* UserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96901D322BAD306C0094CF2D /* UserUseCase.swift */; };
@@ -45,6 +47,8 @@
 		9652CDD22BAC850200D49652 /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
 		9652CDD42BAC851F00D49652 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
 		96622E292BAD8E2F00686AA5 /* MapListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapListView.swift; sourceTree = "<group>"; };
+		966CBEF62BB12B5900D6112F /* AccountEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AccountEntity.swift; path = Udacity_OnTheMap/Application/CustomView/AccountEntity.swift; sourceTree = SOURCE_ROOT; };
+		966CBEF82BB12B7200D6112F /* SessionEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SessionEntity.swift; path = Udacity_OnTheMap/Application/CustomView/SessionEntity.swift; sourceTree = SOURCE_ROOT; };
 		96901D2E2BAD23EC0094CF2D /* MemeTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeTextField.swift; sourceTree = "<group>"; };
 		96901D302BAD305F0094CF2D /* LoginNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginNavigator.swift; sourceTree = "<group>"; };
 		96901D322BAD306C0094CF2D /* UserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUseCase.swift; sourceTree = "<group>"; };
@@ -104,11 +108,14 @@
 			path = CustomView;
 			sourceTree = "<group>";
 		};
-		96901D3A2BAD38C50094CF2D /* Domain */ = {
+		96901D3A2BAD38C50094CF2D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				966CBEF62BB12B5900D6112F /* AccountEntity.swift */,
+				966CBEF82BB12B7200D6112F /* SessionEntity.swift */,
 			);
-			path = Domain;
+			name = Model;
+			path = ../Model;
 			sourceTree = "<group>";
 		};
 		96D7855B2BAC1D790037248C = {
@@ -130,7 +137,6 @@
 		96D785662BAC1D790037248C /* Udacity_OnTheMap */ = {
 			isa = PBXGroup;
 			children = (
-				96901D3A2BAD38C50094CF2D /* Domain */,
 				96D785BA2BAC2A1E0037248C /* Util */,
 				96D785AD2BAC29F60037248C /* Architecture */,
 				96D785802BAC29660037248C /* Platform */,
@@ -186,6 +192,7 @@
 		96D785802BAC29660037248C /* Platform */ = {
 			isa = PBXGroup;
 			children = (
+				96901D3A2BAD38C50094CF2D /* Model */,
 				96D785812BAC29660037248C /* Middleware */,
 				96D785882BAC29660037248C /* Repository */,
 				96D7858C2BAC29660037248C /* Response */,
@@ -356,6 +363,7 @@
 				9652CDD52BAC851F00D49652 /* PasswordTextField.swift in Sources */,
 				96901D332BAD306C0094CF2D /* UserUseCase.swift in Sources */,
 				96D785B62BAC29F60037248C /* ViewModel.swift in Sources */,
+				966CBEF92BB12B7200D6112F /* SessionEntity.swift in Sources */,
 				96901D2F2BAD23EC0094CF2D /* MemeTextField.swift in Sources */,
 				96D785C02BAC2A1E0037248C /* DictionaryPrinter.swift in Sources */,
 				96D7859A2BAC29660037248C /* HTTPMethod.swift in Sources */,
@@ -363,6 +371,7 @@
 				96D7859B2BAC29660037248C /* ServiceBaseRepository.swift in Sources */,
 				96D7857A2BAC21CA0037248C /* AppNavigator.swift in Sources */,
 				96D785B72BAC29F60037248C /* Driver.swift in Sources */,
+				966CBEF72BB12B5900D6112F /* AccountEntity.swift in Sources */,
 				96D7857F2BAC23200037248C /* LoginViewModel.swift in Sources */,
 				96D7856A2BAC1D790037248C /* LoginView.swift in Sources */,
 				96D785BE2BAC2A1E0037248C /* Screen.swift in Sources */,
