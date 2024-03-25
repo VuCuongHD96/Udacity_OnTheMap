@@ -16,8 +16,8 @@ struct LoginViewModel {
 extension LoginViewModel: ViewModel {
     
     class Input: ObservableObject {
-        @Published var emailValue = ""
-        @Published var passwordValue = ""
+        @Published var emailValue = "cuongvx4@fpt.com"
+        @Published var passwordValue = "Fpthoalacpro@2024"
         var loginAction = PassthroughSubject<Void, Never>()
     }
     
@@ -58,7 +58,7 @@ extension LoginViewModel: ViewModel {
                 .trackActivity(activityTracker)
         }
         .sink(receiveValue: { _ in
-            navigator.toMapListScreen()
+            navigator.toTabbar()
         })
         .store(in: cancelBag)
         

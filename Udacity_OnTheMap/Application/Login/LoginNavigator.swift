@@ -9,16 +9,19 @@ import Foundation
 import SwiftUI
 
 protocol LoginNavigatorType {
-    func toMapListScreen()
+
+    func toTabbar()
 }
 
 struct LoginNavigator: LoginNavigatorType {
     
     let navigationController: UINavigationController
     
-    func toMapListScreen() {
-        let mapListView = MapListView()
-        let mapListScreen = UIHostingController(rootView: mapListView)
-        navigationController.pushViewController(mapListScreen, animated: true)
+    func toTabbar() {
+        let storyBoard = UIStoryboard(name: "TabBar", bundle: nil)
+        guard let tabbarScreen = storyBoard.instantiateViewController(withIdentifier: "TabBarController") as? TabBarController else {
+            return
+        }
+        navigationController.pushViewController(tabbarScreen, animated: true)
     }
 }
