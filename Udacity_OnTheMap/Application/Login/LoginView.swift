@@ -54,6 +54,8 @@ struct LoginView: View {
 #Preview {
     let repository = UserRepository(api: .share)
     let useCase = UserUseCase(userRepository: repository)
-    let viewModel = LoginViewModel(useCase: useCase)
+    let navigationController = UINavigationController()
+    let navigator = LoginNavigator(navigationController: navigationController)
+    let viewModel = LoginViewModel(useCase: useCase, navigator: navigator)
     return LoginView(viewModel: viewModel)
 }

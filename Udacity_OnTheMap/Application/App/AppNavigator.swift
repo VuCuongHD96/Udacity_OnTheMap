@@ -19,10 +19,12 @@ struct AppNavigator: AppNavigatorType {
     func toMainView() {
         let repository = UserRepository(api: .share)
         let useCase = UserUseCase(userRepository: repository)
-        let viewModel = LoginViewModel(useCase: useCase)
+        let navigationController = UINavigationController()
+        let navigator = LoginNavigator(navigationController: navigationController)
+        let viewModel = LoginViewModel(useCase: useCase, navigator: navigator)
         let loginView = LoginView(viewModel: viewModel)
         let viewController = UIHostingController(rootView: loginView)
-        let navigationController = UINavigationController(rootViewController: viewController)
+        navigationController.viewControllers = [viewController]
         window.rootViewController = navigationController
         window.makeKeyAndVisible()
     }

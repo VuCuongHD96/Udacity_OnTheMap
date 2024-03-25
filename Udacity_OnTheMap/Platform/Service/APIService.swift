@@ -26,12 +26,8 @@ struct APIService {
         }
         var urlRequest = URLRequest(url: url)
         urlRequest.addValue("application/json", forHTTPHeaderField: "Content-Type")
-//        let body = "{\"udacity\": {\"username\": \"\("cuongvx4@fpt.com")\", \"password\": \"\("Fpthoalacpro@2024")\"}}"
-
-//        urlRequest.httpBody = body.data(using: .utf8)
-                urlRequest.httpBody = input.httpBody
+        urlRequest.httpBody = input.httpBody
         urlRequest.httpMethod = input.requestType.rawValue
-
 
         return session
             .dataTaskPublisher(for: urlRequest)
@@ -46,6 +42,11 @@ struct APIService {
                     throw BaseError.redirectionError
                 }
                 if statusCode == 200 {
+                    if input.urlString.contains(URLs.login) {
+                        let range = 5..<data.count
+                        let newData = data.subdata(in: range)
+                        return newData
+                    }
                     print("\n------------RESPONSE OUTPUT")
                     DictionaryPrinter.printBeauty(data: data)
                     print("------------END RESPONSE OUTPUT")
