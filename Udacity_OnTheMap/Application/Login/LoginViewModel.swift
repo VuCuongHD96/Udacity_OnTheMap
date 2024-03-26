@@ -6,6 +6,7 @@
 //
 
 import Combine
+import Foundation
 
 struct LoginViewModel {
     
@@ -19,6 +20,7 @@ extension LoginViewModel: ViewModel {
         @Published var emailValue = "cuongvx4@fpt.com"
         @Published var passwordValue = "Fpthoalacpro@2024"
         var loginAction = PassthroughSubject<Void, Never>()
+        var signUpAction = PassthroughSubject<Void, Never>()
     }
     
     class Output {
@@ -48,19 +50,25 @@ extension LoginViewModel: ViewModel {
             .store(in: cancelBag)
         
         input.loginAction
-        .map { _ in
-            return UserData(email: input.emailValue, password: input.passwordValue)
-        }
-        .flatMap { userLoginInfo in
-            useCase.login(user: userLoginInfo)
-                .asDriver()
-                .trackError(errorTracker)
-                .trackActivity(activityTracker)
-        }
-        .sink(receiveValue: { _ in
-            navigator.toTabbar()
-        })
-        .store(in: cancelBag)
+            .map { _ in
+                return UserData(email: input.emailValue, password: input.passwordValue)
+            }
+            .flatMap { userLoginInfo in
+                useCase.login(user: userLoginInfo)
+                    .asDriver()
+                    .trackError(errorTracker)
+                    .trackActivity(activityTracker)
+            }
+            .sink(receiveValue: { _ in
+                navigator.toTabbar()
+            })
+            .store(in: cancelBag)
+        
+        input.signUpAction
+            .sink { _ in
+                navigator.signUp()
+            }
+            .store(in: cancelBag)
         
         return output
     }
