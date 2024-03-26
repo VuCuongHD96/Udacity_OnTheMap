@@ -23,6 +23,11 @@
 		96901D372BAD320E0094CF2D /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96901D362BAD320E0094CF2D /* UserRepository.swift */; };
 		96901D392BAD32E30094CF2D /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96901D382BAD32E30094CF2D /* LoginResponse.swift */; };
 		96CD0D902BB309AE00FC1D3C /* LocationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CD0D8F2BB309AE00FC1D3C /* LocationListView.swift */; };
+		96CD0D922BB3103A00FC1D3C /* LocationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CD0D912BB3103A00FC1D3C /* LocationRequest.swift */; };
+		96CD0D942BB310B400FC1D3C /* LocationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CD0D932BB310B400FC1D3C /* LocationResponse.swift */; };
+		96CD0D962BB3115400FC1D3C /* LocationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CD0D952BB3115400FC1D3C /* LocationRepository.swift */; };
+		96CD0D982BB311FD00FC1D3C /* LocationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CD0D972BB311FD00FC1D3C /* LocationListViewModel.swift */; };
+		96CD0D9A2BB3125E00FC1D3C /* LocationListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CD0D992BB3125E00FC1D3C /* LocationListUseCase.swift */; };
 		96D7856A2BAC1D790037248C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96D785692BAC1D790037248C /* LoginView.swift */; };
 		96D7856C2BAC1D7C0037248C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96D7856B2BAC1D7C0037248C /* Assets.xcassets */; };
 		96D7856F2BAC1D7C0037248C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96D7856E2BAC1D7C0037248C /* Preview Assets.xcassets */; };
@@ -67,6 +72,11 @@
 		96901D362BAD320E0094CF2D /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		96901D382BAD32E30094CF2D /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		96CD0D8F2BB309AE00FC1D3C /* LocationListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationListView.swift; sourceTree = "<group>"; };
+		96CD0D912BB3103A00FC1D3C /* LocationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRequest.swift; sourceTree = "<group>"; };
+		96CD0D932BB310B400FC1D3C /* LocationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationResponse.swift; sourceTree = "<group>"; };
+		96CD0D952BB3115400FC1D3C /* LocationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRepository.swift; sourceTree = "<group>"; };
+		96CD0D972BB311FD00FC1D3C /* LocationListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListViewModel.swift; sourceTree = "<group>"; };
+		96CD0D992BB3125E00FC1D3C /* LocationListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListUseCase.swift; sourceTree = "<group>"; };
 		96D785642BAC1D790037248C /* Udacity_OnTheMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Udacity_OnTheMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96D785692BAC1D790037248C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		96D7856B2BAC1D7C0037248C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -121,6 +131,8 @@
 			isa = PBXGroup;
 			children = (
 				96CD0D8F2BB309AE00FC1D3C /* LocationListView.swift */,
+				96CD0D972BB311FD00FC1D3C /* LocationListViewModel.swift */,
+				96CD0D992BB3125E00FC1D3C /* LocationListUseCase.swift */,
 			);
 			path = LocationListView;
 			sourceTree = "<group>";
@@ -254,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				96901D362BAD320E0094CF2D /* UserRepository.swift */,
+				96CD0D952BB3115400FC1D3C /* LocationRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -263,6 +276,7 @@
 			children = (
 				96901D382BAD32E30094CF2D /* LoginResponse.swift */,
 				96F2722C2BB1C40E00865316 /* LogoutResponse.swift */,
+				96CD0D932BB310B400FC1D3C /* LocationResponse.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -279,6 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				96901D342BAD30AB0094CF2D /* LoginRequest.swift */,
+				96CD0D912BB3103A00FC1D3C /* LocationRequest.swift */,
 				96F2722A2BB1C3E800865316 /* LogoutRequest.swift */,
 			);
 			path = Request;
@@ -387,20 +402,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				96901D352BAD30AB0094CF2D /* LoginRequest.swift in Sources */,
+				96CD0D942BB310B400FC1D3C /* LocationResponse.swift in Sources */,
 				96D785B92BAC29F60037248C /* Observable.swift in Sources */,
 				96D7859E2BAC29660037248C /* HTTPStatusCode.swift in Sources */,
 				9652CDD32BAC850200D49652 /* EmailTextField.swift in Sources */,
+				96CD0D982BB311FD00FC1D3C /* LocationListViewModel.swift in Sources */,
 				96F2722D2BB1C40E00865316 /* LogoutResponse.swift in Sources */,
 				9640B53B2BB165A2009FBA7F /* TabbarNavigator.swift in Sources */,
 				96D7857C2BAC21F40037248C /* AppViewModel.swift in Sources */,
 				96D785782BAC21B80037248C /* AppDelegate.swift in Sources */,
 				96901D312BAD305F0094CF2D /* LoginNavigator.swift in Sources */,
+				96CD0D962BB3115400FC1D3C /* LocationRepository.swift in Sources */,
 				9640B53C2BB165A2009FBA7F /* TabbarViewModel.swift in Sources */,
 				96901D392BAD32E30094CF2D /* LoginResponse.swift in Sources */,
 				96D785AC2BAC29660037248C /* BaseError.swift in Sources */,
 				96D785B52BAC29F60037248C /* ErrorTracker.swift in Sources */,
 				96D785B82BAC29F60037248C /* ActivityTracker.swift in Sources */,
 				96D7859F2BAC29660037248C /* URLs.swift in Sources */,
+				96CD0D9A2BB3125E00FC1D3C /* LocationListUseCase.swift in Sources */,
 				966CBEFC2BB15BF300D6112F /* StudentLocation.swift in Sources */,
 				9652CDD52BAC851F00D49652 /* PasswordTextField.swift in Sources */,
 				96901D332BAD306C0094CF2D /* UserUseCase.swift in Sources */,
@@ -410,6 +429,7 @@
 				96D785C02BAC2A1E0037248C /* DictionaryPrinter.swift in Sources */,
 				96D7859A2BAC29660037248C /* HTTPMethod.swift in Sources */,
 				96901D372BAD320E0094CF2D /* UserRepository.swift in Sources */,
+				96CD0D922BB3103A00FC1D3C /* LocationRequest.swift in Sources */,
 				96CD0D902BB309AE00FC1D3C /* LocationListView.swift in Sources */,
 				96D7859B2BAC29660037248C /* ServiceBaseRepository.swift in Sources */,
 				96D7857A2BAC21CA0037248C /* AppNavigator.swift in Sources */,
@@ -564,6 +584,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -596,6 +617,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

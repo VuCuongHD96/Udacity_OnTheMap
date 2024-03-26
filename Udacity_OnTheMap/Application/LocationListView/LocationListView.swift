@@ -9,17 +9,28 @@ import SwiftUI
 
 struct LocationListView: View {
     
-    let locationArray = [
-        "America",
-        "Japan",
-        "Viet Nam"
-    ]
+    let input: LocationListViewModel.Input
+    @ObservedObject var output: LocationListViewModel.Output
+    let cancelBag = CancelBag()
+    
+    init(viewModel: LocationListViewModel) {
+        let input = LocationListViewModel.Input()
+        output = viewModel.transform(input, cancelBag: cancelBag)
+        self.input = input
+    }
     
     var body: some View {
-        List(locationArray, id: \.self) { item in
+        List(output.locationList, id: \.objectId) { item in
             HStack {
                 Image("pin")
-                Text(item)
+                VStack(alignment: .leading) {
+                    HStack {
+                        Text(item.firstName)
+                        Text(item.lastName)
+                    }
+                    Text(item.mediaURL)
+                        .foregroundStyle(.gray)
+                }
             }
             .listRowSeparator(.visible)
         }
@@ -28,5 +39,7 @@ struct LocationListView: View {
 }
 
 #Preview {
-    LocationListView()
+    let useCase = LocationListUseCase()
+    let viewModel = LocationListViewModel(useCase: useCase)
+    return LocationListView(viewModel: viewModel)
 }

@@ -24,7 +24,9 @@ struct TabbarNavigator: TabbarNavigatorType {
     }
     
     func createLocationListScreen() -> UIViewController {
-        let locationListView = LocationListView()
+        let useCase = LocationListUseCase()
+        let viewModel = LocationListViewModel(useCase: useCase)
+        let locationListView = LocationListView(viewModel: viewModel)
         let locationListViewController = UIHostingController(rootView: locationListView)
         locationListViewController.tabBarItem = createLocationListTabbarItem()
         return locationListViewController

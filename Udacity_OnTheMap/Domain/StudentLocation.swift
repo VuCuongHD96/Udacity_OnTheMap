@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct StudentLocation {
+struct StudentLocation: Decodable {
     let firstName, lastName: String
     let longitude, latitude: Double
     let mapString: String
