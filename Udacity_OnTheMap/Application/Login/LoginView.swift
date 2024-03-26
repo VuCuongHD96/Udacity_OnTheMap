@@ -44,6 +44,7 @@ struct LoginView: View {
             .allowsHitTesting(output.loginIsValid)
             Text("Don't have an account?")
             Button("Sign up") {
+                input.signUpAction.send()
             }
         }
         .padding()

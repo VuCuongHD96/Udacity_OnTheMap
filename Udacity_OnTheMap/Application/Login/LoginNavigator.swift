@@ -9,8 +9,9 @@ import Foundation
 import SwiftUI
 
 protocol LoginNavigatorType {
-
+    
     func toTabbar()
+    func signUp()
 }
 
 struct LoginNavigator: LoginNavigatorType {
@@ -23,5 +24,12 @@ struct LoginNavigator: LoginNavigatorType {
             return
         }
         navigationController.pushViewController(tabbarScreen, animated: true)
+    }
+    
+    func signUp() {
+        guard let url = URL(string: "https://auth.udacity.com/sign-up") else {
+            return
+        }
+        UIApplication.shared.open(url)
     }
 }
