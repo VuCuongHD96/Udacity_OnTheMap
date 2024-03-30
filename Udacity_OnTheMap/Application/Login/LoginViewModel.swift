@@ -23,14 +23,21 @@ extension LoginViewModel: ViewModel {
         var signUpAction = PassthroughSubject<Void, Never>()
     }
     
-    class Output {
+    class Output: ObservableObject {
         @Published var loginIsValid = false
+        @Published var alertMessage = AlertMessage()
     }
     
     func transform(_ input: Input, cancelBag: CancelBag) -> Output {
         let output = Output()
         let errorTracker = ErrorTracker()
         let activityTracker = ActivityTracker(false)
+        
+        errorTracker.map {
+            AlertMessage(error: $0)
+        }
+        .assign(to: \.alertMessage, on: output)
+        .store(in: cancelBag)
         
         let userIsValid = input.$emailValue
             .removeDuplicates()

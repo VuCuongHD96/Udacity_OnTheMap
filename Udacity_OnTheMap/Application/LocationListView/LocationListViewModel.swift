@@ -9,7 +9,7 @@ import Combine
 
 struct LocationListViewModel {
     
-    let useCase: LocationListUseCaseType
+    let useCase: LocationUseCaseType
 }
 
 extension LocationListViewModel: ViewModel {

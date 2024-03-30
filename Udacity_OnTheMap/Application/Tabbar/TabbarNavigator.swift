@@ -25,7 +25,7 @@ struct TabbarNavigator: TabbarNavigatorType {
     }
     
     func createLocationListScreen() -> UIViewController {
-        let useCase = LocationListUseCase()
+        let useCase = LocationUseCase()
         let viewModel = LocationListViewModel(useCase: useCase)
         let locationListView = LocationListView(viewModel: viewModel)
         let locationListViewController = UIHostingController(rootView: locationListView)
@@ -41,7 +41,9 @@ struct TabbarNavigator: TabbarNavigatorType {
     }
     
     func createMapScreen() -> UIViewController {
-        let mapView = MapView()
+        let useCase = LocationUseCase()
+        let viewModel = MapViewModel(useCase: useCase)
+        let mapView = MapView(viewModel: viewModel)
         let mapViewController = UIHostingController(rootView: mapView)
         mapViewController.tabBarItem = createMapTabbarItem()
         return mapViewController

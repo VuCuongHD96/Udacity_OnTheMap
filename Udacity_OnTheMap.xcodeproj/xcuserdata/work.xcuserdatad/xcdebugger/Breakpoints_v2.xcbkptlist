@@ -7,22 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "9ECEAA12-AF34-4283-8ABF-18E5ABF15E43"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Udacity_OnTheMap/Application/Login/LoginViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
-            landmarkName = "transform(_:cancelBag:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "98EB7CD1-D245-493F-B174-54662A8C9A26"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -34,38 +18,6 @@
             endingLineNumber = "55"
             landmarkName = "request(input:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "98EB7CD1-D245-493F-B174-54662A8C9A26 - 7629570367780687"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Foundation.Data, __C.NSURLResponse) throws -&gt; Foundation.Data in Udacity_OnTheMap.APIService.request&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(input: Udacity_OnTheMap.ServiceBaseRequest) -&gt; Combine.AnyPublisher&lt;&#x3c4;_0_0, Swift.Error&gt;"
-                  moduleName = "Udacity_OnTheMap"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/work/Desktop/Udacity/Udacity_OnTheMap/Udacity_OnTheMap/Platform/Service/APIService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "55"
-                  endingLineNumber = "55"
-                  offsetFromSymbolStart = "3624">
-               </Location>
-               <Location
-                  uuid = "98EB7CD1-D245-493F-B174-54662A8C9A26 - 7629570367780687"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Foundation.Data, __C.NSURLResponse) throws -&gt; Foundation.Data in Udacity_OnTheMap.APIService.request&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(input: Udacity_OnTheMap.ServiceBaseRequest) -&gt; Combine.AnyPublisher&lt;&#x3c4;_0_0, Swift.Error&gt;"
-                  moduleName = "Udacity_OnTheMap"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/work/Desktop/Udacity/Udacity_OnTheMap/Udacity_OnTheMap/Platform/Service/APIService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "55"
-                  endingLineNumber = "55"
-                  offsetFromSymbolStart = "3148">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -82,86 +34,118 @@
             endingLineNumber = "60"
             landmarkName = "request(input:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "9A61AC31-8568-4EA0-8B62-0469284E34ED - 38b6d2cb572a4ef2"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Udacity_OnTheMap.APIService.request&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(input: Udacity_OnTheMap.ServiceBaseRequest) -&gt; Combine.AnyPublisher&lt;&#x3c4;_0_0, Swift.Error&gt;"
-                  moduleName = "Udacity_OnTheMap"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/work/Desktop/Udacity/Udacity_OnTheMap/Udacity_OnTheMap/Platform/Service/APIService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
-                  offsetFromSymbolStart = "2328">
-               </Location>
-               <Location
-                  uuid = "9A61AC31-8568-4EA0-8B62-0469284E34ED - 88e8235da90a2495"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (Swift.Error) -&gt; Swift.Error in Udacity_OnTheMap.APIService.request&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(input: Udacity_OnTheMap.ServiceBaseRequest) -&gt; Combine.AnyPublisher&lt;&#x3c4;_0_0, Swift.Error&gt;"
-                  moduleName = "Udacity_OnTheMap"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/work/Desktop/Udacity/Udacity_OnTheMap/Udacity_OnTheMap/Platform/Service/APIService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "60"
-                  endingLineNumber = "60"
-                  offsetFromSymbolStart = "32">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "7AAA118C-5BEE-4479-9F5B-D252853F700E"
+            uuid = "8DF4ADDF-26ED-4337-BC7A-CCDB77B534F8"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Udacity_OnTheMap/Platform/Service/APIService.swift"
+            filePath = "Udacity_OnTheMap/Application/Map/MapViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "request(input:)"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "transform(_:cancelBag:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "7AAA118C-5BEE-4479-9F5B-D252853F700E - 76295703677806c5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Foundation.Data, __C.NSURLResponse) throws -&gt; Foundation.Data in Udacity_OnTheMap.APIService.request&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(input: Udacity_OnTheMap.ServiceBaseRequest) -&gt; Combine.AnyPublisher&lt;&#x3c4;_0_0, Swift.Error&gt;"
-                  moduleName = "Udacity_OnTheMap"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/work/Desktop/Udacity/Udacity_OnTheMap/Udacity_OnTheMap/Platform/Service/APIService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "53"
-                  endingLineNumber = "53"
-                  offsetFromSymbolStart = "3332">
-               </Location>
-               <Location
-                  uuid = "7AAA118C-5BEE-4479-9F5B-D252853F700E - 76295703677806c5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Foundation.Data, __C.NSURLResponse) throws -&gt; Foundation.Data in Udacity_OnTheMap.APIService.request&lt;&#x3c4;_0_0 where &#x3c4;_0_0: Swift.Decodable&gt;(input: Udacity_OnTheMap.ServiceBaseRequest) -&gt; Combine.AnyPublisher&lt;&#x3c4;_0_0, Swift.Error&gt;"
-                  moduleName = "Udacity_OnTheMap"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/work/Desktop/Udacity/Udacity_OnTheMap/Udacity_OnTheMap/Platform/Service/APIService.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "53"
-                  endingLineNumber = "53"
-                  offsetFromSymbolStart = "3100">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EA261CFF-6FA2-4ECC-BDD2-D2E8E95039EB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Udacity_OnTheMap/Application/Map/MapViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
+            landmarkName = "transform(_:cancelBag:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FFE0F3F0-2D1A-4363-B109-531D7A84CF55"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Udacity_OnTheMap/Application/Map/MapViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
+            landmarkName = "transform(_:cancelBag:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C80D7E73-83EC-4447-B7A1-3BF2600A7770"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Udacity_OnTheMap/Application/Map/MapViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "transform(_:cancelBag:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F20CDD6E-A2AC-4226-ACB0-FD39CCB882A4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Udacity_OnTheMap/Util/AlertMessage.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "init(error:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CEACAC34-B8FA-4B9F-8B6B-04B3FB39FA9F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Udacity_OnTheMap/Util/AlertMessage.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "init(error:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "73E41862-BF30-4F2D-8AA7-A174FFCA56BC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Udacity_OnTheMap/Application/Map/MapViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "openURL(_:)"
+            landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
