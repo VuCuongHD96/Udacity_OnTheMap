@@ -43,7 +43,8 @@ extension TabbarViewModel: TabbarViewModelType {
     
     func showScreen() {
         let locationListScreen = navigator.createLocationListScreen()
-        viewControllers = [locationListScreen]
+        let mapScreen = navigator.createMapScreen()
+        viewControllers = [mapScreen, locationListScreen]
     }
     
     func logoutAction() {
