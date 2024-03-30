@@ -9,6 +9,7 @@ import SwiftUI
 
 protocol TabbarNavigatorType {
     func createLocationListScreen() -> UIViewController
+    func createMapScreen() -> UIViewController
     func popBack()
 }
 
@@ -30,6 +31,20 @@ struct TabbarNavigator: TabbarNavigatorType {
         let locationListViewController = UIHostingController(rootView: locationListView)
         locationListViewController.tabBarItem = createLocationListTabbarItem()
         return locationListViewController
+    }
+    
+    private func createMapTabbarItem() -> UITabBarItem {
+        let mapImage = UIImage(named: "map")?.withRenderingMode(.alwaysOriginal)
+        let mapSelectedImage = UIImage(named: "map")?.withRenderingMode(.alwaysOriginal)
+        let tabbarItem = UITabBarItem(title: nil, image: mapImage, selectedImage: mapSelectedImage)
+        return tabbarItem
+    }
+    
+    func createMapScreen() -> UIViewController {
+        let mapView = MapView()
+        let mapViewController = UIHostingController(rootView: mapView)
+        mapViewController.tabBarItem = createMapTabbarItem()
+        return mapViewController
     }
     
     func popBack() {

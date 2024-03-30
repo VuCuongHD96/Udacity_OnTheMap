@@ -13,6 +13,7 @@
 		9640B53E2BB165A2009FBA7F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9640B53A2BB165A2009FBA7F /* TabBarController.swift */; };
 		9652CDD32BAC850200D49652 /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9652CDD22BAC850200D49652 /* EmailTextField.swift */; };
 		9652CDD52BAC851F00D49652 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9652CDD42BAC851F00D49652 /* PasswordTextField.swift */; };
+		966100372BB8645C00E1FA53 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966100362BB8645C00E1FA53 /* MapView.swift */; };
 		966CBEF72BB12B5900D6112F /* AccountEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966CBEF62BB12B5900D6112F /* AccountEntity.swift */; };
 		966CBEF92BB12B7200D6112F /* SessionEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966CBEF82BB12B7200D6112F /* SessionEntity.swift */; };
 		966CBEFC2BB15BF300D6112F /* StudentLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966CBEFB2BB15BF300D6112F /* StudentLocation.swift */; };
@@ -62,6 +63,7 @@
 		9640B53A2BB165A2009FBA7F /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		9652CDD22BAC850200D49652 /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
 		9652CDD42BAC851F00D49652 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
+		966100362BB8645C00E1FA53 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		966CBEF62BB12B5900D6112F /* AccountEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AccountEntity.swift; path = Udacity_OnTheMap/Application/CustomView/AccountEntity.swift; sourceTree = SOURCE_ROOT; };
 		966CBEF82BB12B7200D6112F /* SessionEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SessionEntity.swift; path = Udacity_OnTheMap/Application/CustomView/SessionEntity.swift; sourceTree = SOURCE_ROOT; };
 		966CBEFB2BB15BF300D6112F /* StudentLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLocation.swift; sourceTree = "<group>"; };
@@ -125,6 +127,14 @@
 				9640B53A2BB165A2009FBA7F /* TabBarController.swift */,
 			);
 			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		966100352BB8644E00E1FA53 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				966100362BB8645C00E1FA53 /* MapView.swift */,
+			);
+			path = Map;
 			sourceTree = "<group>";
 		};
 		96622E282BAD8E1100686AA5 /* LocationListView */ = {
@@ -204,6 +214,7 @@
 		96D785752BAC21540037248C /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				966100352BB8644E00E1FA53 /* Map */,
 				9640B5362BB165A2009FBA7F /* Tabbar */,
 				96622E282BAD8E1100686AA5 /* LocationListView */,
 				96901D2D2BAD23CF0094CF2D /* CustomView */,
@@ -426,6 +437,7 @@
 				96D785B62BAC29F60037248C /* ViewModel.swift in Sources */,
 				966CBEF92BB12B7200D6112F /* SessionEntity.swift in Sources */,
 				96901D2F2BAD23EC0094CF2D /* MemeTextField.swift in Sources */,
+				966100372BB8645C00E1FA53 /* MapView.swift in Sources */,
 				96D785C02BAC2A1E0037248C /* DictionaryPrinter.swift in Sources */,
 				96D7859A2BAC29660037248C /* HTTPMethod.swift in Sources */,
 				96901D372BAD320E0094CF2D /* UserRepository.swift in Sources */,
@@ -584,7 +596,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -617,7 +629,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
