@@ -39,7 +39,7 @@ struct LocationListView: View {
 }
 
 #Preview {
-    let useCase = LocationListUseCase()
+    let useCase = LocationUseCase()
     let viewModel = LocationListViewModel(useCase: useCase)
     return LocationListView(viewModel: viewModel)
 }

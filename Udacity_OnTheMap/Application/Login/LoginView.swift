@@ -15,7 +15,7 @@ enum FocusField {
 struct LoginView: View {
     
     @ObservedObject var input: LoginViewModel.Input
-    let output: LoginViewModel.Output
+    @ObservedObject var output: LoginViewModel.Output
     let cancelBag = CancelBag()
     
     init(viewModel: LoginViewModel) {
@@ -47,6 +47,9 @@ struct LoginView: View {
                 input.signUpAction.send()
             }
         }
+        .alert(isPresented: $output.alertMessage.isShowing, content: {
+            Alert(title: Text(output.alertMessage.message))
+        })
         .padding()
         .padding(.bottom, 100)
     }

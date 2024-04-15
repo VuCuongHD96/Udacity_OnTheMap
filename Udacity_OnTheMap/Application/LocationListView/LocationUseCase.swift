@@ -1,5 +1,5 @@
 //
-//  LocationListUseCase.swift
+//  LocationUseCase.swift
 //  Udacity_OnTheMap
 //
 //  Created by Work on 26/03/2024.
@@ -7,12 +7,12 @@
 
 import Foundation
 
-protocol LocationListUseCaseType {
+protocol LocationUseCaseType {
     
     func getLocationList() -> Observable<[StudentLocation]>
 }
 
-struct LocationListUseCase: LocationListUseCaseType {
+struct LocationUseCase: LocationUseCaseType {
     
     let locationRepository = LocationRepository(api: .share)
     

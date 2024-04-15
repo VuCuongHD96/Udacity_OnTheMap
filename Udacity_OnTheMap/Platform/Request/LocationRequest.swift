@@ -10,8 +10,9 @@ import Foundation
 class LocationRequest: ServiceBaseRequest {
     
     init(limit: Int) {
-        let params = [
-            "limit": limit
+        let params: [String : Any] = [
+            "limit": limit,
+            "order": "-updatedAt"
         ]
         super.init(urlString: URLs.location, requestType: .get, params: params)
     }
