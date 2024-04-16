@@ -14,8 +14,8 @@ struct LocationListViewModel {
 
 extension LocationListViewModel: ViewModel {
     
-    struct Input {
-        var loadTrigger = Driver.just(Void())
+    class Input: ObservableObject {
+        var loadTrigger = PassthroughSubject<Void, Never>()
     }
     
     class Output: ObservableObject {

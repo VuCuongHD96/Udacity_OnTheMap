@@ -23,8 +23,8 @@ struct MapViewRepresent: UIViewRepresentable {
     }
     
     func makeCoordinator() -> MapCoordinator {
-        MapCoordinator {_ in 
-            openLinkTrigger = "https123://www.google.com/"
+        MapCoordinator {
+            openLinkTrigger = $0
         }
     }
     

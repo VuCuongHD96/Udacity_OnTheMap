@@ -16,7 +16,7 @@ struct MapViewModel {
 extension MapViewModel: ViewModel {
     
     class Input: ObservableObject {
-        var loadTrigger = Driver.just(Void())
+        var loadTrigger = PassthroughSubject<Void, Never>()
         @Published var openLinkTrigger: String = ""
     }
     
