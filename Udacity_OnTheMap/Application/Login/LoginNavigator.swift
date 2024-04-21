@@ -19,7 +19,11 @@ struct LoginNavigator: LoginNavigatorType {
     let navigationController: UINavigationController
     
     func toTabbar() {
-        let tabbarView = TabbarView()
+        let userRepository = UserRepository(api: .share)
+        let userUseCase = UserUseCase(userRepository: userRepository)
+        let navigator = TabbarNavigator(navigationController: navigationController)
+        let viewModel = TabbarViewModel(userUseCase: userUseCase, navigator: navigator)
+        let tabbarView = TabbarView(tabbarViewModel: viewModel)
         let tabbarScreen = UIHostingController(rootView: tabbarView)
         navigationController.navigationBar.isHidden = true
         navigationController.pushViewController(tabbarScreen, animated: true)
