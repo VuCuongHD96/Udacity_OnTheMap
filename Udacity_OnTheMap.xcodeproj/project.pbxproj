@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9609D7F02BD55FA200A7589F /* TabbarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9609D7EF2BD55FA200A7589F /* TabbarViewModel.swift */; };
+		9609D7F22BD5606F00A7589F /* TabbarNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9609D7F12BD5606F00A7589F /* TabbarNavigator.swift */; };
 		9652CDD32BAC850200D49652 /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9652CDD22BAC850200D49652 /* EmailTextField.swift */; };
 		9652CDD52BAC851F00D49652 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9652CDD42BAC851F00D49652 /* PasswordTextField.swift */; };
 		9658513D2BCEA928005447EF /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9658513C2BCEA928005447EF /* TabbarView.swift */; };
@@ -62,6 +64,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9609D7EF2BD55FA200A7589F /* TabbarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewModel.swift; sourceTree = "<group>"; };
+		9609D7F12BD5606F00A7589F /* TabbarNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarNavigator.swift; sourceTree = "<group>"; };
 		9652CDD22BAC850200D49652 /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
 		9652CDD42BAC851F00D49652 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
 		9658513C2BCEA928005447EF /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
@@ -132,6 +136,8 @@
 			isa = PBXGroup;
 			children = (
 				9658513C2BCEA928005447EF /* TabbarView.swift */,
+				9609D7F12BD5606F00A7589F /* TabbarNavigator.swift */,
+				9609D7EF2BD55FA200A7589F /* TabbarViewModel.swift */,
 			);
 			path = TabbarView;
 			sourceTree = "<group>";
@@ -438,6 +444,7 @@
 				96CD0D942BB310B400FC1D3C /* LocationResponse.swift in Sources */,
 				96D785B92BAC29F60037248C /* Observable.swift in Sources */,
 				96D7859E2BAC29660037248C /* HTTPStatusCode.swift in Sources */,
+				9609D7F02BD55FA200A7589F /* TabbarViewModel.swift in Sources */,
 				9652CDD32BAC850200D49652 /* EmailTextField.swift in Sources */,
 				96CD0D982BB311FD00FC1D3C /* LocationListViewModel.swift in Sources */,
 				96F825A12BD01063001F2459 /* UdacityNavigationHeaderView.swift in Sources */,
@@ -472,6 +479,7 @@
 				96CD0D922BB3103A00FC1D3C /* LocationRequest.swift in Sources */,
 				96CD0D902BB309AE00FC1D3C /* LocationListView.swift in Sources */,
 				96D7859B2BAC29660037248C /* ServiceBaseRepository.swift in Sources */,
+				9609D7F22BD5606F00A7589F /* TabbarNavigator.swift in Sources */,
 				96C0E6632BCAD20C00B9D175 /* MapView.swift in Sources */,
 				96D7857A2BAC21CA0037248C /* AppNavigator.swift in Sources */,
 				96D785B72BAC29F60037248C /* Driver.swift in Sources */,
