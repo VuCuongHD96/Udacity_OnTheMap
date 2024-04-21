@@ -9,12 +9,11 @@ import SwiftUI
 
 struct LocationListView: View {
     
-    let input: LocationListViewModel.Input
+    @ObservedObject var input: LocationListViewModel.Input
     @ObservedObject var output: LocationListViewModel.Output
     let cancelBag = CancelBag()
     
-    init(viewModel: LocationListViewModel) {
-        let input = LocationListViewModel.Input()
+    init(viewModel: LocationListViewModel, input: LocationListViewModel.Input) {
         output = viewModel.transform(input, cancelBag: cancelBag)
         self.input = input
     }
@@ -41,5 +40,5 @@ struct LocationListView: View {
 #Preview {
     let useCase = LocationUseCase()
     let viewModel = LocationListViewModel(useCase: useCase)
-    return LocationListView(viewModel: viewModel)
+    return LocationListView(viewModel: viewModel, input: LocationListViewModel.Input())
 }

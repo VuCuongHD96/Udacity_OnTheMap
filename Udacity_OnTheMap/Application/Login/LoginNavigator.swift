@@ -19,10 +19,9 @@ struct LoginNavigator: LoginNavigatorType {
     let navigationController: UINavigationController
     
     func toTabbar() {
-        let storyBoard = UIStoryboard(name: "TabBar", bundle: nil)
-        guard let tabbarScreen = storyBoard.instantiateViewController(withIdentifier: "TabBarController") as? TabBarController else {
-            return
-        }
+        let tabbarView = TabbarView()
+        let tabbarScreen = UIHostingController(rootView: tabbarView)
+        navigationController.navigationBar.isHidden = true
         navigationController.pushViewController(tabbarScreen, animated: true)
     }
     
