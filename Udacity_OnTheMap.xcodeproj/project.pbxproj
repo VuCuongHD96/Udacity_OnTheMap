@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9609D7F02BD55FA200A7589F /* TabbarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9609D7EF2BD55FA200A7589F /* TabbarViewModel.swift */; };
 		9609D7F22BD5606F00A7589F /* TabbarNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9609D7F12BD5606F00A7589F /* TabbarNavigator.swift */; };
+		9649EDBC2BD7F7990019B741 /* UserInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9649EDBB2BD7F7990019B741 /* UserInfoResponse.swift */; };
 		9652CDD32BAC850200D49652 /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9652CDD22BAC850200D49652 /* EmailTextField.swift */; };
 		9652CDD52BAC851F00D49652 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9652CDD42BAC851F00D49652 /* PasswordTextField.swift */; };
 		9658513D2BCEA928005447EF /* TabbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9658513C2BCEA928005447EF /* TabbarView.swift */; };
@@ -61,11 +62,14 @@
 		96F2722D2BB1C40E00865316 /* LogoutResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F2722C2BB1C40E00865316 /* LogoutResponse.swift */; };
 		96F825A12BD01063001F2459 /* UdacityNavigationHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F8259E2BD01063001F2459 /* UdacityNavigationHeaderView.swift */; };
 		96F825A22BD01063001F2459 /* UdacityNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96F8259F2BD01063001F2459 /* UdacityNavigationView.swift */; };
+		96FFC29B2BD6A93900464D2E /* StudentInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FFC29A2BD6A93900464D2E /* StudentInfo.swift */; };
+		96FFC29D2BD6ACB100464D2E /* UserInfoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96FFC29C2BD6ACB100464D2E /* UserInfoRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9609D7EF2BD55FA200A7589F /* TabbarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewModel.swift; sourceTree = "<group>"; };
 		9609D7F12BD5606F00A7589F /* TabbarNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarNavigator.swift; sourceTree = "<group>"; };
+		9649EDBB2BD7F7990019B741 /* UserInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoResponse.swift; sourceTree = "<group>"; };
 		9652CDD22BAC850200D49652 /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
 		9652CDD42BAC851F00D49652 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
 		9658513C2BCEA928005447EF /* TabbarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarView.swift; sourceTree = "<group>"; };
@@ -119,6 +123,8 @@
 		96F2722C2BB1C40E00865316 /* LogoutResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutResponse.swift; sourceTree = "<group>"; };
 		96F8259E2BD01063001F2459 /* UdacityNavigationHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UdacityNavigationHeaderView.swift; sourceTree = "<group>"; };
 		96F8259F2BD01063001F2459 /* UdacityNavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UdacityNavigationView.swift; sourceTree = "<group>"; };
+		96FFC29A2BD6A93900464D2E /* StudentInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentInfo.swift; sourceTree = "<group>"; };
+		96FFC29C2BD6ACB100464D2E /* UserInfoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,7 +174,7 @@
 		966CBEFA2BB15BE800D6112F /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				966CBEFB2BB15BF300D6112F /* StudentLocation.swift */,
+				96FFC29A2BD6A93900464D2E /* StudentInfo.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -184,6 +190,7 @@
 		96901D3A2BAD38C50094CF2D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				966CBEFB2BB15BF300D6112F /* StudentLocation.swift */,
 				966CBEF62BB12B5900D6112F /* AccountEntity.swift */,
 				966CBEF82BB12B7200D6112F /* SessionEntity.swift */,
 			);
@@ -306,6 +313,7 @@
 			children = (
 				96901D382BAD32E30094CF2D /* LoginResponse.swift */,
 				96F2722C2BB1C40E00865316 /* LogoutResponse.swift */,
+				9649EDBB2BD7F7990019B741 /* UserInfoResponse.swift */,
 				96CD0D932BB310B400FC1D3C /* LocationResponse.swift */,
 			);
 			path = Response;
@@ -325,6 +333,7 @@
 				96901D342BAD30AB0094CF2D /* LoginRequest.swift */,
 				96CD0D912BB3103A00FC1D3C /* LocationRequest.swift */,
 				96F2722A2BB1C3E800865316 /* LogoutRequest.swift */,
+				96FFC29C2BD6ACB100464D2E /* UserInfoRequest.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -452,6 +461,7 @@
 				96D7857C2BAC21F40037248C /* AppViewModel.swift in Sources */,
 				96D785782BAC21B80037248C /* AppDelegate.swift in Sources */,
 				96D46B5C2BC59B5E0084CC08 /* AlertMessage.swift in Sources */,
+				96FFC29D2BD6ACB100464D2E /* UserInfoRequest.swift in Sources */,
 				96901D312BAD305F0094CF2D /* LoginNavigator.swift in Sources */,
 				9658513D2BCEA928005447EF /* TabbarView.swift in Sources */,
 				96CD0D962BB3115400FC1D3C /* LocationRepository.swift in Sources */,
@@ -463,12 +473,14 @@
 				96D785B82BAC29F60037248C /* ActivityTracker.swift in Sources */,
 				96D7859F2BAC29660037248C /* URLs.swift in Sources */,
 				96CD0D9A2BB3125E00FC1D3C /* LocationUseCase.swift in Sources */,
+				9649EDBC2BD7F7990019B741 /* UserInfoResponse.swift in Sources */,
 				966CBEFC2BB15BF300D6112F /* StudentLocation.swift in Sources */,
 				9652CDD52BAC851F00D49652 /* PasswordTextField.swift in Sources */,
 				96901D332BAD306C0094CF2D /* UserUseCase.swift in Sources */,
 				96D785B62BAC29F60037248C /* ViewModel.swift in Sources */,
 				966CBEF92BB12B7200D6112F /* SessionEntity.swift in Sources */,
 				96901D2F2BAD23EC0094CF2D /* MemeTextField.swift in Sources */,
+				96FFC29B2BD6A93900464D2E /* StudentInfo.swift in Sources */,
 				966100372BB8645C00E1FA53 /* MapViewRepresent.swift in Sources */,
 				966100392BB86B9200E1FA53 /* MapViewModel.swift in Sources */,
 				96D785C02BAC2A1E0037248C /* DictionaryPrinter.swift in Sources */,

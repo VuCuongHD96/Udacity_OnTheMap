@@ -12,6 +12,7 @@ struct LoginViewModel {
     
     let useCase: UserUseCaseType
     let navigator: LoginNavigatorType
+    var studentInfo = StudentInfo.shared
 }
 
 extension LoginViewModel: ViewModel {
@@ -55,7 +56,7 @@ extension LoginViewModel: ViewModel {
             }
             .assign(to: \.loginIsValid, on: output)
             .store(in: cancelBag)
-        
+
         input.loginAction
             .map { _ in
                 return UserData(email: input.emailValue, password: input.passwordValue)
@@ -66,11 +67,24 @@ extension LoginViewModel: ViewModel {
                     .trackError(errorTracker)
                     .trackActivity(activityTracker)
             }
+            .handleEvents(receiveOutput: {
+                studentInfo.uniqueKey = $0.account.key
+            })
+            .flatMap {
+                useCase.getUserInfo(id: $0.account.key)
+                    .asDriver()
+                    .trackError(errorTracker)
+                    .trackActivity(activityTracker)
+            }
+            .handleEvents(receiveOutput: { userInfo in
+                studentInfo.firstName = userInfo.firstName
+                studentInfo.lastName = userInfo.lastName
+            })
             .sink(receiveValue: { _ in
                 navigator.toTabbar()
             })
             .store(in: cancelBag)
-        
+
         input.signUpAction
             .sink { _ in
                 navigator.signUp()

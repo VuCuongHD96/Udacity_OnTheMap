@@ -12,4 +12,5 @@ struct URLs {
     static let login = baseURL + "/session"
     static let logout = baseURL + "/session"
     static let location = baseURL + "/StudentLocation"
+    static let userInfo = baseURL + "/users"
 }

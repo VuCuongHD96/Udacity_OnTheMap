@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "closure #10 in LoginViewModel.transform(_:cancelBag:):LoginViewModel.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "studentInfo">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
