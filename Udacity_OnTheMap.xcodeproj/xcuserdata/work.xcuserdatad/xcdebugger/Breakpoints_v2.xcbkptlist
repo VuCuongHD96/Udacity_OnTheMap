@@ -164,6 +164,20 @@
             landmarkType = "24">
             <Locations>
                <Location
+                  uuid = "A17E3F57-0EB3-4B7F-9D91-00A6B27807FD - 34ae6ce026bbe4a8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Udacity_OnTheMap.TabbarView.tabbarHeader.getter : some"
+                  moduleName = "Udacity_OnTheMap"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/work/Desktop/Udacity/Udacity_OnTheMap/Udacity_OnTheMap/Application/TabbarView/TabbarView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "62"
+                  endingLineNumber = "62">
+               </Location>
+               <Location
                   uuid = "A17E3F57-0EB3-4B7F-9D91-00A6B27807FD - db561188480e0e4"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
@@ -176,20 +190,6 @@
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "61"
                   endingLineNumber = "61">
-               </Location>
-               <Location
-                  uuid = "A17E3F57-0EB3-4B7F-9D91-00A6B27807FD - 604cbff824b45b31"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 () -&gt; SwiftUI.Image in closure #1 () -&gt; SwiftUI.TupleView&lt;(SwiftUI.Button&lt;SwiftUI.Image&gt;, SwiftUI.Spacer, SwiftUI.Button&lt;SwiftUI.Image&gt;, &lt;&lt;opaque return type of SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0)&gt; in Udacity_OnTheMap.TabbarView.tabbarHeader.getter : some"
-                  moduleName = "Udacity_OnTheMap"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/work/Desktop/Udacity/Udacity_OnTheMap/Udacity_OnTheMap/Application/TabbarView/TabbarView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "62"
-                  endingLineNumber = "62">
                </Location>
             </Locations>
          </BreakpointContent>

@@ -34,6 +34,9 @@ struct LocationListView: View {
             .listRowSeparator(.visible)
         }
         .listStyle(.inset)
+        .onAppear {
+            input.loadTrigger.send()
+        }
     }
 }
 
