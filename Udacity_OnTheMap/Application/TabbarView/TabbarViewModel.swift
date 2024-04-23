@@ -11,6 +11,7 @@ struct TabbarViewModel {
     
     let userUseCase: UserUseCaseType
     let navigator: TabbarNavigatorType
+    var studentInfo = StudentInfo.shared
 }
 
 extension TabbarViewModel: ViewModel {
@@ -26,12 +27,19 @@ extension TabbarViewModel: ViewModel {
     
     func transform(_ input: Input, cancelBag: CancelBag) -> Output {
         let output = Output()
+        let errorTracker = ErrorTracker()
+        let activityTracker = ActivityTracker(false)
         
         input.logoutAction
             .flatMap {
                 userUseCase.logout()
                     .asDriver()
+                    .trackError(errorTracker)
+                    .trackActivity(activityTracker)
             }
+            .handleEvents(receiveOutput: {
+                studentInfo.clearAllData()
+            })
             .sink {
                 navigator.goBack()
             }
