@@ -71,6 +71,7 @@ struct TabbarView: View {
             }
             Image("add")
                 .onTapGesture {
+                    tabbarInput.addAction.send()
                 }
         }
     }

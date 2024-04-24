@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9609D7F02BD55FA200A7589F /* TabbarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9609D7EF2BD55FA200A7589F /* TabbarViewModel.swift */; };
 		9609D7F22BD5606F00A7589F /* TabbarNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9609D7F12BD5606F00A7589F /* TabbarNavigator.swift */; };
+		962CBD8F2BD9472000FFC362 /* AddLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962CBD8E2BD9472000FFC362 /* AddLocationView.swift */; };
 		9649EDBC2BD7F7990019B741 /* UserInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9649EDBB2BD7F7990019B741 /* UserInfoResponse.swift */; };
 		9652CDD32BAC850200D49652 /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9652CDD22BAC850200D49652 /* EmailTextField.swift */; };
 		9652CDD52BAC851F00D49652 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9652CDD42BAC851F00D49652 /* PasswordTextField.swift */; };
@@ -69,6 +70,7 @@
 /* Begin PBXFileReference section */
 		9609D7EF2BD55FA200A7589F /* TabbarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewModel.swift; sourceTree = "<group>"; };
 		9609D7F12BD5606F00A7589F /* TabbarNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarNavigator.swift; sourceTree = "<group>"; };
+		962CBD8E2BD9472000FFC362 /* AddLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationView.swift; sourceTree = "<group>"; };
 		9649EDBB2BD7F7990019B741 /* UserInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoResponse.swift; sourceTree = "<group>"; };
 		9652CDD22BAC850200D49652 /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
 		9652CDD42BAC851F00D49652 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
@@ -138,6 +140,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		962CBD8D2BD9471200FFC362 /* AddLocation */ = {
+			isa = PBXGroup;
+			children = (
+				962CBD8E2BD9472000FFC362 /* AddLocationView.swift */,
+			);
+			path = AddLocation;
+			sourceTree = "<group>";
+		};
 		9658513B2BCEA91D005447EF /* TabbarView */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,6 +249,7 @@
 		96D785752BAC21540037248C /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				962CBD8D2BD9471200FFC362 /* AddLocation */,
 				96F825A02BD01063001F2459 /* Navigation */,
 				9658513B2BCEA91D005447EF /* TabbarView */,
 				966100352BB8644E00E1FA53 /* Map */,
@@ -502,6 +513,7 @@
 				96D785A62BAC29660037248C /* APIService.swift in Sources */,
 				96D785AB2BAC29660037248C /* DecodingError.swift in Sources */,
 				96D785B42BAC29F60037248C /* CancelBag.swift in Sources */,
+				962CBD8F2BD9472000FFC362 /* AddLocationView.swift in Sources */,
 				96D7859D2BAC29660037248C /* ServiceBaseRequest.swift in Sources */,
 				96F2722B2BB1C3E800865316 /* LogoutRequest.swift in Sources */,
 			);

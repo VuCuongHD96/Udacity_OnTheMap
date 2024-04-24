@@ -142,8 +142,8 @@
             filePath = "Udacity_OnTheMap/Application/TabbarView/TabbarViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
             landmarkName = "transform(_:cancelBag:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -174,55 +174,9 @@
             filePath = "Udacity_OnTheMap/Application/TabbarView/TabbarViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "transform(_:cancelBag:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "0B1CE9CF-0BF2-4DE3-894D-4A1591AD594D - dbd3a2513d4bf962"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Udacity_OnTheMap.TabbarViewModel.transform(_: Udacity_OnTheMap.TabbarViewModel.Input, cancelBag: Udacity_OnTheMap.CancelBag) -&gt; Udacity_OnTheMap.TabbarViewModel.Output"
-                  moduleName = "Udacity_OnTheMap"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/work/Desktop/Udacity/Udacity_OnTheMap/Udacity_OnTheMap/Application/TabbarView/TabbarViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "35"
-                  endingLineNumber = "35">
-               </Location>
-               <Location
-                  uuid = "0B1CE9CF-0BF2-4DE3-894D-4A1591AD594D - be1d8a284a19590a"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 () -&gt; () in Udacity_OnTheMap.TabbarViewModel.transform(_: Udacity_OnTheMap.TabbarViewModel.Input, cancelBag: Udacity_OnTheMap.CancelBag) -&gt; Udacity_OnTheMap.TabbarViewModel.Output"
-                  moduleName = "Udacity_OnTheMap"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/work/Desktop/Udacity/Udacity_OnTheMap/Udacity_OnTheMap/Application/TabbarView/TabbarViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "36"
-                  endingLineNumber = "36">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "0C96E5FC-07F1-42F9-BFFD-CB06113504D3"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Udacity_OnTheMap/Platform/Service/APIService.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "request(input:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import SwiftUI
 
 protocol TabbarNavigatorType {
     func goBack()
+    func toAddScreen()
 }
 
 struct TabbarNavigator: TabbarNavigatorType {
@@ -17,5 +19,11 @@ struct TabbarNavigator: TabbarNavigatorType {
     
     func goBack() {
         navigationController.popViewController(animated: true)
+    }
+    
+    func toAddScreen() {
+        let addView = AddLocationView()
+        let addScreen = UIHostingController(rootView: addView)
+        navigationController.pushViewController(addScreen, animated: true)
     }
 }

@@ -19,6 +19,7 @@ extension TabbarViewModel: ViewModel {
     struct Input {
         
         var logoutAction = PassthroughSubject<Void, Never>()
+        var addAction = PassthroughSubject<Void, Never>()
     }
     
     class Output: ObservableObject {
@@ -42,6 +43,12 @@ extension TabbarViewModel: ViewModel {
             })
             .sink {
                 navigator.goBack()
+            }
+            .store(in: cancelBag)
+        
+        input.addAction
+            .sink {
+                navigator.toAddScreen()
             }
             .store(in: cancelBag)
         
