@@ -22,11 +22,22 @@ private struct LocationTextFieldModifier: ViewModifier {
 }
 
 struct AddLocationView: View {
+    
+    @ObservedObject var input: AddLocationViewModel.Input
+    @ObservedObject var output: AddLocationViewModel.Output
+    private let cancelBag = CancelBag()
+    
+    init(viewModel: AddLocationViewModel) {
+        let input = AddLocationViewModel.Input()
+        output = viewModel.transform(input, cancelBag: cancelBag)
+        self.input = input
+    }
+    
     var body: some View {
         UdacityNavigationView {
             HStack {
                 Button(action: {
-                    
+                    input.backAction.send()
                 }, label: {
                     Image("undo")
                 })
@@ -37,17 +48,22 @@ struct AddLocationView: View {
                 Rectangle()
                     .fill(.white)
                     .frame(width: 30, height: 30)
-                    
             }
             .padding(.horizontal)
         } bodyContent: {
             VStack(spacing: 30) {
                 Image("icon_world")
                 VStack(spacing: 15) {
-                    TextField("Enter a Location", text: .constant(""))
+                    TextField("Enter a Location", text: $input.locationString)
                         .modifier(LocationTextFieldModifier())
-                    TextField("Enter a Website", text: .constant(""))
+                    TextField("Enter a Website", text: $input.websiteString)
                         .modifier(LocationTextFieldModifier())
+                    if !output.isWebsiteValid {
+                        Text("This url not contains http://")
+                            .fontWeight(.medium)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .foregroundColor(.red)
+                    }
                     findButton
                 }
             }
@@ -58,11 +74,11 @@ struct AddLocationView: View {
     
     private var findButton: some View {
         Button {
-            
+            input.findLocationAction.send()
         } label: {
             Text("FIND LOCATION")
-                .frame(maxWidth: .infinity, maxHeight: 40)
-                .background(Color.blue.opacity(0.8))
+                .frame(maxWidth: .infinity, minHeight: 40)
+                .background(output.findButtonStatus ? Color.blue.opacity(0.8) : Color.gray)
                 .foregroundColor(.white)
                 .cornerRadius(8)
                 .overlay {
@@ -70,9 +86,14 @@ struct AddLocationView: View {
                         .stroke(Color.gray, lineWidth: 1)
                 }
         }
+        .allowsHitTesting(output.findButtonStatus)
+        .animation(.easeInOut, value: output.findButtonStatus)
     }
 }
 
 #Preview {
-    AddLocationView()
+    let navigationController = UINavigationController()
+    let navigator = AddLocationNavigator(navigationController: navigationController)
+    let viewModel = AddLocationViewModel(navigator: navigator)
+    return AddLocationView(viewModel: viewModel)
 }

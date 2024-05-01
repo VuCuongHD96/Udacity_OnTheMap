@@ -22,7 +22,9 @@ struct TabbarNavigator: TabbarNavigatorType {
     }
     
     func toAddScreen() {
-        let addView = AddLocationView()
+        let navigator = AddLocationNavigator(navigationController: navigationController)
+        let viewModel = AddLocationViewModel(navigator: navigator)
+        let addView = AddLocationView(viewModel: viewModel)
         let addScreen = UIHostingController(rootView: addView)
         navigationController.pushViewController(addScreen, animated: true)
     }
