@@ -16,4 +16,8 @@ class LocationRequest: ServiceBaseRequest {
         ]
         super.init(urlString: URLs.location, requestType: .get, params: params)
     }
+    
+    init(studentInfoData: StudentInfoData) {
+        super.init(urlString: URLs.location, requestType: .post, body: studentInfoData)
+    }
 }

@@ -135,38 +135,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F6D54793-8B7B-4C40-B52D-F5242CF229FF"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Udacity_OnTheMap/Application/TabbarView/TabbarViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "45"
-            endingLineNumber = "45"
-            landmarkName = "transform(_:cancelBag:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A17E3F57-0EB3-4B7F-9D91-00A6B27807FD"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Udacity_OnTheMap/Application/TabbarView/TabbarView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
-            landmarkName = "tabbarHeader"
-            landmarkType = "24">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "0B1CE9CF-0BF2-4DE3-894D-4A1591AD594D"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -176,22 +144,6 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "36"
             endingLineNumber = "36"
-            landmarkName = "transform(_:cancelBag:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "5887D6B2-BE03-49C0-AE49-EF2CAD8FDB3E"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Udacity_OnTheMap/Application/Login/LoginViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
             landmarkName = "transform(_:cancelBag:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -231,15 +183,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "62A7127E-E733-4B98-8678-4F4FAAC5FCD5"
+            uuid = "12BE024D-3ACA-4575-B087-87BEF3D83F0E"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Udacity_OnTheMap/Application/FindLocation/FindLocationViewModel.swift"
+            filePath = "Udacity_OnTheMap/Application/AddLocation/AddLocationViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
             landmarkName = "transform(_:cancelBag:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -247,15 +199,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "1BAB2503-7255-4F2B-9D8C-85D836E603D7"
+            uuid = "C5B49050-ADC8-4EBA-A29B-5723FD47DCA6"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Udacity_OnTheMap/Application/FindLocation/FindLocationViewModel.swift"
+            filePath = "Udacity_OnTheMap/Application/TabbarView/TabbarViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
             landmarkName = "transform(_:cancelBag:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -263,11 +215,11 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "56B3503A-0EF0-4BF3-AE20-795B7A17577A"
+            uuid = "F7554052-C535-4DED-875F-8884DD5788CF"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Udacity_OnTheMap/Application/FindLocation/FindLocationViewModel.swift"
+            filePath = "Udacity_OnTheMap/Application/Login/LoginViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "71"
@@ -279,15 +231,31 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "353D5832-1085-4A4F-A2C5-9A52A34C4CAE"
+            uuid = "34B32BC3-72D6-4F9A-8BB8-7F188079D228"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Udacity_OnTheMap/Application/FindLocation/FindLocationViewModel.swift"
+            filePath = "Udacity_OnTheMap/Application/Login/LoginViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "transform(_:cancelBag:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "13E50C55-76B5-4212-A8D7-264DB0F2620D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Udacity_OnTheMap/Application/Login/LoginViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "transform(_:cancelBag:)"
             landmarkType = "7">
          </BreakpointContent>

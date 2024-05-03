@@ -20,6 +20,10 @@ struct MapViewRepresent: UIViewRepresentable {
             annotation.coordinate = item.coordinate
             uiView.addAnnotation(annotation)
         }
+        
+        if let firstLocation = locationViewItemList.first {
+            setRegion(uiView: uiView, locationViewItem: firstLocation)
+        }
     }
     
     func makeCoordinator() -> MapCoordinator {
@@ -33,11 +37,21 @@ struct MapViewRepresent: UIViewRepresentable {
         mapView.delegate = context.coordinator
         return mapView
     }
+    
+    private func setRegion(uiView: MKMapView, locationViewItem: LocationViewItem) {
+        let centerCoordinate = locationViewItem.coordinate
+        let coordinateSpan = MKCoordinateSpan()
+        let coordinateRegion = MKCoordinateRegion(center: centerCoordinate,
+                                                  span: coordinateSpan)
+        uiView.setRegion(coordinateRegion, animated: true)
+    }
 }
 
 #Preview {
     let input = MapViewModel.Input()
     let output = MapViewModel.Output()
+    let coordinate = CLLocationCoordinate2D(latitude: 37.7749, longitude: -122.4194)
+    let locationViewItem = LocationViewItem(name: "", coordinate: coordinate)
     return MapViewRepresent(openLinkTrigger: .constant(""),
-                            locationViewItemList: [])
+                            locationViewItemList: [locationViewItem])
 }

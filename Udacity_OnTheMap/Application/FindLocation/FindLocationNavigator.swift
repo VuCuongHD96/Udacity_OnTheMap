@@ -27,7 +27,9 @@ extension FindLocationNavigator: FindLocationNavigatorType {
     }
     
     func goToAddLocationScreen(locationViewItem: LocationViewItem) {
-        let addLocationView = AddLocationView(locationFound: locationViewItem)
+        let navigator = AddLocationNavigator(navigationController: navigationController)
+        let viewModel = AddLocationViewModel(locationFound: locationViewItem, navigator: navigator)
+        let addLocationView = AddLocationView(viewModel: viewModel)
         let addLocationScreen = UIHostingController(rootView: addLocationView)
         navigationController.pushViewController(addLocationScreen, animated: true)
     }

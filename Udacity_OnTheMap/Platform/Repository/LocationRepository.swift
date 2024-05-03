@@ -10,6 +10,7 @@ import Foundation
 protocol LocationRepositoryType {
 
     func getLocationList() -> Observable<[StudentLocation]>
+    func sendLocation(studentInfoData: StudentInfoData) -> Observable<String>
 }
 
 class LocationRepository: ServiceBaseRepository, LocationRepositoryType {
@@ -19,6 +20,15 @@ class LocationRepository: ServiceBaseRepository, LocationRepositoryType {
         return api.request(input: request)
             .map { (data: LocationResponse) in
                 return data.locationList
+            }
+            .eraseToAnyPublisher()
+    }
+    
+    func sendLocation(studentInfoData: StudentInfoData) -> Observable<String> {
+        let request = LocationRequest(studentInfoData: studentInfoData)
+        return api.request(input: request)
+            .map { (data: AddLocationResponse) in
+                return data.objectID
             }
             .eraseToAnyPublisher()
     }

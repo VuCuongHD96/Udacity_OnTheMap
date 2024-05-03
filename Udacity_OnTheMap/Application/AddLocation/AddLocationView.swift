@@ -10,12 +10,21 @@ import MapKit
 
 struct AddLocationView: View {
     
-    let locationFound: LocationViewItem
+    let input: AddLocationViewModel.Input
+    let output: AddLocationViewModel.Output
+    let cancelBag = CancelBag()
+    
+    init(viewModel: AddLocationViewModel) {
+        let input = AddLocationViewModel.Input()
+        output = viewModel.transform(input, cancelBag: cancelBag)
+        self.input = input
+    }
     
     var body: some View {
         UdacityNavigationView {
             HStack {
                 Button(action: {
+                    input.backAction.send()
                 }, label: {
                     Image("undo")
                 })
@@ -29,7 +38,7 @@ struct AddLocationView: View {
             }
             .padding(.horizontal)
         } bodyContent: {
-            MapViewRepresent(openLinkTrigger: .constant(""), locationViewItemList: [locationFound])
+            MapViewRepresent(openLinkTrigger: .constant(""), locationViewItemList: [output.locationFound])
                 .overlay(alignment: .bottom) {
                     addButton
                 }
@@ -40,6 +49,7 @@ struct AddLocationView: View {
     
     private var addButton: some View {
         Button {
+            input.addLocationAction.send()
         } label: {
             Text("ADD LOCATION")
                 .fontWeight(.medium)
@@ -57,7 +67,9 @@ struct AddLocationView: View {
 }
 
 #Preview {
-    let locationFound = LocationViewItem(name: "Ha Noi",
-                                         coordinate: .init(latitude: 0, longitude: 0))
-    return AddLocationView(locationFound: locationFound)
+    let navigationController = UINavigationController()
+    let navigator = AddLocationNavigator(navigationController: navigationController)
+    let locationViewItem = LocationViewItem(name: "", coordinate: .init())
+    let viewModel = AddLocationViewModel(locationFound: locationViewItem, navigator: navigator)
+    return AddLocationView(viewModel: viewModel)
 }
