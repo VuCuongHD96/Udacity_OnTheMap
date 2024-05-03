@@ -10,6 +10,7 @@ import Foundation
 protocol LocationUseCaseType {
     
     func getLocationList() -> Observable<[StudentLocation]>
+    func sendLocation(studentInfoData: StudentInfoData) -> Observable<String>
 }
 
 struct LocationUseCase: LocationUseCaseType {
@@ -18,5 +19,9 @@ struct LocationUseCase: LocationUseCaseType {
     
     func getLocationList() -> Observable<[StudentLocation]> {
         return locationRepository.getLocationList()
+    }
+    
+    func sendLocation(studentInfoData: StudentInfoData) -> Observable<String> {
+        return locationRepository.sendLocation(studentInfoData: studentInfoData)
     }
 }

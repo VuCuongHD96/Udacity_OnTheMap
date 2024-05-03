@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		9609D7F02BD55FA200A7589F /* TabbarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9609D7EF2BD55FA200A7589F /* TabbarViewModel.swift */; };
 		9609D7F22BD5606F00A7589F /* TabbarNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9609D7F12BD5606F00A7589F /* TabbarNavigator.swift */; };
+		960C10C72BE47F130070B584 /* AddLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960C10C62BE47F130070B584 /* AddLocationViewModel.swift */; };
+		960C10C92BE4843E0070B584 /* AddLocationNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960C10C82BE4843E0070B584 /* AddLocationNavigator.swift */; };
+		960C10CB2BE48F140070B584 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960C10CA2BE48F140070B584 /* UserData.swift */; };
+		960C10CD2BE48F4B0070B584 /* StudentInfoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960C10CC2BE48F4B0070B584 /* StudentInfoData.swift */; };
+		960C10CF2BE492950070B584 /* AddLocationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960C10CE2BE492950070B584 /* AddLocationResponse.swift */; };
 		962C13FD2BE28CFF00BB659E /* GeocoderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C13FC2BE28CFF00BB659E /* GeocoderManager.swift */; };
 		962CBD8F2BD9472000FFC362 /* FindLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962CBD8E2BD9472000FFC362 /* FindLocationView.swift */; };
 		9649EDBC2BD7F7990019B741 /* UserInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9649EDBB2BD7F7990019B741 /* UserInfoResponse.swift */; };
@@ -75,6 +80,11 @@
 /* Begin PBXFileReference section */
 		9609D7EF2BD55FA200A7589F /* TabbarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewModel.swift; sourceTree = "<group>"; };
 		9609D7F12BD5606F00A7589F /* TabbarNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarNavigator.swift; sourceTree = "<group>"; };
+		960C10C62BE47F130070B584 /* AddLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationViewModel.swift; sourceTree = "<group>"; };
+		960C10C82BE4843E0070B584 /* AddLocationNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationNavigator.swift; sourceTree = "<group>"; };
+		960C10CA2BE48F140070B584 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		960C10CC2BE48F4B0070B584 /* StudentInfoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentInfoData.swift; sourceTree = "<group>"; };
+		960C10CE2BE492950070B584 /* AddLocationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationResponse.swift; sourceTree = "<group>"; };
 		962C13FC2BE28CFF00BB659E /* GeocoderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocoderManager.swift; sourceTree = "<group>"; };
 		962CBD8E2BD9472000FFC362 /* FindLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindLocationView.swift; sourceTree = "<group>"; };
 		9649EDBB2BD7F7990019B741 /* UserInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoResponse.swift; sourceTree = "<group>"; };
@@ -215,6 +225,8 @@
 			children = (
 				966CBEFB2BB15BF300D6112F /* StudentLocation.swift */,
 				966CBEF62BB12B5900D6112F /* AccountEntity.swift */,
+				960C10CA2BE48F140070B584 /* UserData.swift */,
+				960C10CC2BE48F4B0070B584 /* StudentInfoData.swift */,
 				966CBEF82BB12B7200D6112F /* SessionEntity.swift */,
 			);
 			name = Model;
@@ -225,6 +237,8 @@
 			isa = PBXGroup;
 			children = (
 				96CD400B2BE3D60300D1FB30 /* AddLocationView.swift */,
+				960C10C62BE47F130070B584 /* AddLocationViewModel.swift */,
+				960C10C82BE4843E0070B584 /* AddLocationNavigator.swift */,
 			);
 			path = AddLocation;
 			sourceTree = "<group>";
@@ -346,6 +360,7 @@
 			children = (
 				96901D382BAD32E30094CF2D /* LoginResponse.swift */,
 				96F2722C2BB1C40E00865316 /* LogoutResponse.swift */,
+				960C10CE2BE492950070B584 /* AddLocationResponse.swift */,
 				9649EDBB2BD7F7990019B741 /* UserInfoResponse.swift */,
 				96CD0D932BB310B400FC1D3C /* LocationResponse.swift */,
 			);
@@ -485,6 +500,7 @@
 			files = (
 				96901D352BAD30AB0094CF2D /* LoginRequest.swift in Sources */,
 				96CD0D942BB310B400FC1D3C /* LocationResponse.swift in Sources */,
+				960C10CB2BE48F140070B584 /* UserData.swift in Sources */,
 				96D785B92BAC29F60037248C /* Observable.swift in Sources */,
 				96D7859E2BAC29660037248C /* HTTPStatusCode.swift in Sources */,
 				9609D7F02BD55FA200A7589F /* TabbarViewModel.swift in Sources */,
@@ -492,9 +508,11 @@
 				96CD0D982BB311FD00FC1D3C /* LocationListViewModel.swift in Sources */,
 				96F825A12BD01063001F2459 /* UdacityNavigationHeaderView.swift in Sources */,
 				96F2722D2BB1C40E00865316 /* LogoutResponse.swift in Sources */,
+				960C10CD2BE48F4B0070B584 /* StudentInfoData.swift in Sources */,
 				96D7857C2BAC21F40037248C /* AppViewModel.swift in Sources */,
 				96D785782BAC21B80037248C /* AppDelegate.swift in Sources */,
 				96D46B5C2BC59B5E0084CC08 /* AlertMessage.swift in Sources */,
+				960C10C92BE4843E0070B584 /* AddLocationNavigator.swift in Sources */,
 				968A75E42BDA9FF700DD4AF9 /* FindLocationViewModel.swift in Sources */,
 				96FFC29D2BD6ACB100464D2E /* UserInfoRequest.swift in Sources */,
 				96901D312BAD305F0094CF2D /* LoginNavigator.swift in Sources */,
@@ -532,6 +550,8 @@
 				96D7857A2BAC21CA0037248C /* AppNavigator.swift in Sources */,
 				962C13FD2BE28CFF00BB659E /* GeocoderManager.swift in Sources */,
 				96D785B72BAC29F60037248C /* Driver.swift in Sources */,
+				960C10C72BE47F130070B584 /* AddLocationViewModel.swift in Sources */,
+				960C10CF2BE492950070B584 /* AddLocationResponse.swift in Sources */,
 				966CBEF72BB12B5900D6112F /* AccountEntity.swift in Sources */,
 				96CD400C2BE3D60300D1FB30 /* AddLocationView.swift in Sources */,
 				96D7857F2BAC23200037248C /* LoginViewModel.swift in Sources */,

@@ -10,6 +10,7 @@ import CoreLocation
 
 struct FindLocationViewModel {
     
+    var studentInfo = StudentInfo.shared
     let navigator: FindLocationNavigatorType
 }
 
@@ -73,6 +74,12 @@ extension FindLocationViewModel: ViewModel {
             .compactMap { location in
                 location?.coordinate
             }
+            .handleEvents(receiveOutput: {
+                studentInfo.mapString = input.locationString
+                studentInfo.mediaURL = input.websiteString
+                studentInfo.latitude = $0.latitude
+                studentInfo.longitude = $0.longitude
+            })
             .sink(receiveValue: { location in
                 let locationViewItem = LocationViewItem(name: input.locationString, coordinate: location)
                 navigator.goToAddLocationScreen(locationViewItem: locationViewItem)

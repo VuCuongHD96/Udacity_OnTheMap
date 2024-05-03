@@ -16,8 +16,8 @@ class StudentInfo {
     var lastName = ""
     var mapString = ""
     var mediaURL = ""
-    var latitude = 0
-    var longitude = 0
+    var latitude: Double = 0
+    var longitude: Double = 0
     
     func clearAllData() {
         uniqueKey = ""

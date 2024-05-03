@@ -11,4 +11,13 @@ struct LocationViewItem {
     
     let name: String
     let coordinate: CLLocationCoordinate2D
+    
+    init(name: String, coordinate: CLLocationCoordinate2D) {
+        self.name = name
+        self.coordinate = coordinate
+    }
+    
+    init() {
+        self.init(name: "", coordinate: CLLocationCoordinate2D())
+    }
 }
