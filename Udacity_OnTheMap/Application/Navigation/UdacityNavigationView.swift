@@ -29,7 +29,6 @@ struct UdacityNavigationView<HeaderContent: View, BodyContent: View>: View {
                 headerContent
             }
             bodyContent
-            Spacer()
         }
     }
 }
