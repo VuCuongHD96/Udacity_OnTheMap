@@ -16,7 +16,7 @@ protocol LocationRepositoryType {
 class LocationRepository: ServiceBaseRepository, LocationRepositoryType {
     
     func getLocationList() -> Observable<[StudentLocation]> {
-        let request = LocationRequest(limit: 20)
+        let request = LocationRequest(limit: 100)
         return api.request(input: request)
             .map { (data: LocationResponse) in
                 return data.locationList

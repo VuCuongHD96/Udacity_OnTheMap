@@ -17,7 +17,7 @@ extension MapViewModel: ViewModel {
     
     class Input: ObservableObject {
         var loadTrigger = PassthroughSubject<Void, Never>()
-        @Published var openLinkTrigger: String = ""
+        @Published var openLinkTrigger: String?
     }
     
     class Output: ObservableObject {
@@ -39,9 +39,9 @@ extension MapViewModel: ViewModel {
         input.loadTrigger
             .flatMap {
                 useCase.getLocationList()
-                    .asDriver()
                     .trackError(errorTracker)
                     .trackActivity(activityTracker)
+                    .asDriver()
             }
             .map {
                 MapTranslator.createLocationViewItemList(from: $0)
@@ -50,8 +50,9 @@ extension MapViewModel: ViewModel {
             .store(in: cancelBag)
         
         input.$openLinkTrigger
-            .compactMap { string in
-                return URL(string: string)
+            .unwrap()
+            .map { urlString in
+                return URL(string: urlString)
             }
             .flatMap { url in
                 openURL(url)
@@ -66,18 +67,4 @@ extension MapViewModel: ViewModel {
         
         return output
     }
-}
-
-
-func openURL(_ url: URL) -> AnyPublisher<URL, Error> {
-    return Future<URL, Error> { promise in
-        UIApplication.shared.open(url, options: [:]) { result in
-            if result {
-                promise(.success(url))
-            } else {
-                promise(.failure(BaseError.redirectionError))
-            }
-        }
-    }
-    .eraseToAnyPublisher()
 }

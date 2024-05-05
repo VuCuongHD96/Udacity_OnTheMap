@@ -18,8 +18,8 @@ struct LoginViewModel {
 extension LoginViewModel: ViewModel {
     
     class Input: ObservableObject {
-        @Published var emailValue = "cuongvx4@fpt.com"
-        @Published var passwordValue = "Fpthoalacpro@2024"
+        @Published var emailValue = ""
+        @Published var passwordValue = ""
         var loginAction = PassthroughSubject<Void, Never>()
         var signUpAction = PassthroughSubject<Void, Never>()
     }
@@ -34,8 +34,8 @@ extension LoginViewModel: ViewModel {
         let errorTracker = ErrorTracker()
         let activityTracker = ActivityTracker(false)
         
-        errorTracker.map {
-            AlertMessage(error: $0)
+        errorTracker.map { error in
+            AlertMessage(error: error)
         }
         .assign(to: \.alertMessage, on: output)
         .store(in: cancelBag)
@@ -63,18 +63,18 @@ extension LoginViewModel: ViewModel {
             }
             .flatMap { userLoginInfo in
                 useCase.login(user: userLoginInfo)
-                    .asDriver()
                     .trackError(errorTracker)
                     .trackActivity(activityTracker)
+                    .asDriver()
             }
             .handleEvents(receiveOutput: {
                 studentInfo.uniqueKey = $0.account.key
             })
             .flatMap {
                 useCase.getUserInfo(id: $0.account.key)
-                    .asDriver()
                     .trackError(errorTracker)
                     .trackActivity(activityTracker)
+                    .asDriver()
             }
             .handleEvents(receiveOutput: { userInfo in
                 studentInfo.firstName = userInfo.firstName

@@ -21,16 +21,25 @@ extension FindLocationViewModel: ViewModel {
         @Published var locationString = ""
         @Published var websiteString = ""
         let findLocationAction = PassthroughSubject<Void, Never>()
+        let timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
     }
     
     class Output: ObservableObject {
         @Published var findButtonStatus = false
         @Published var isWebsiteValid = true
+        @Published var logoDegrees: Double = 0
+        @Published var alertMessage = AlertMessage()
     }
     
     func transform(_ input: Input, cancelBag: CancelBag) -> Output {
         let output = Output()
         let errorTracker = ErrorTracker()
+        
+        errorTracker.map { error in
+            AlertMessage(error: error)
+        }
+        .assign(to: \.alertMessage, on: output)
+        .store(in: cancelBag)
         
         input.backAction
             .sink {
@@ -84,6 +93,17 @@ extension FindLocationViewModel: ViewModel {
                 let locationViewItem = LocationViewItem(name: input.locationString, coordinate: location)
                 navigator.goToAddLocationScreen(locationViewItem: locationViewItem)
             })
+            .store(in: cancelBag)
+        
+        input.findLocationAction
+            .prefix(1)
+            .flatMap {
+                input.timer
+            }
+            .sink(receiveValue: { _ in
+                output.logoDegrees += 30
+            })
+            
             .store(in: cancelBag)
         
         return output

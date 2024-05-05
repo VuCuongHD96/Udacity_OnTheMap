@@ -11,7 +11,7 @@ import MapKit
 struct AddLocationView: View {
     
     let input: AddLocationViewModel.Input
-    let output: AddLocationViewModel.Output
+    @ObservedObject var output: AddLocationViewModel.Output
     let cancelBag = CancelBag()
     
     init(viewModel: AddLocationViewModel) {
@@ -45,6 +45,9 @@ struct AddLocationView: View {
                 .padding(.top)
         }
         .ignoresSafeArea(edges: .bottom)
+        .alert(isPresented: $output.alertMessage.isShowing, content: {
+            Alert(title: Text(output.alertMessage.message))
+        })
     }
     
     private var addButton: some View {
