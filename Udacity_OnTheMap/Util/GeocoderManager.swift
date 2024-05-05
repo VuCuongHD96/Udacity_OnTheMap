@@ -17,7 +17,7 @@ struct GeocoderManager {
                 if let marker = marker {
                     promise(.success(marker))
                 } else if let error = error {
-                    promise(.failure(error))
+                    promise(.failure(BaseError.locationError))
                 } else {
                     print("Location Error")
                 }

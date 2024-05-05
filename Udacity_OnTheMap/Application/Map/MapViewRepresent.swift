@@ -17,6 +17,11 @@ struct MapViewRepresent: UIViewRepresentable {
         locationViewItemList.forEach { item in
             let annotation = MKPointAnnotation()
             annotation.title = item.name
+            if item.website.isEmpty {
+                annotation.subtitle = "This url is empty"
+            } else {
+                annotation.subtitle = item.website
+            }
             annotation.coordinate = item.coordinate
             uiView.addAnnotation(annotation)
         }
@@ -51,7 +56,7 @@ struct MapViewRepresent: UIViewRepresentable {
     let input = MapViewModel.Input()
     let output = MapViewModel.Output()
     let coordinate = CLLocationCoordinate2D(latitude: 37.7749, longitude: -122.4194)
-    let locationViewItem = LocationViewItem(name: "", coordinate: coordinate)
+    let locationViewItem = LocationViewItem(name: "", coordinate: coordinate, website: "")
     return MapViewRepresent(openLinkTrigger: .constant(""),
                             locationViewItemList: [locationViewItem])
 }

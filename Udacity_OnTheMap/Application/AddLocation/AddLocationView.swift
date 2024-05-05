@@ -46,7 +46,8 @@ struct AddLocationView: View {
         }
         .ignoresSafeArea(edges: .bottom)
         .alert(isPresented: $output.alertMessage.isShowing, content: {
-            Alert(title: Text(output.alertMessage.message))
+            Alert(title: Text(output.alertMessage.title),
+                  message: Text(output.alertMessage.message))
         })
     }
     
@@ -72,7 +73,7 @@ struct AddLocationView: View {
 #Preview {
     let navigationController = UINavigationController()
     let navigator = AddLocationNavigator(navigationController: navigationController)
-    let locationViewItem = LocationViewItem(name: "", coordinate: .init())
+    let locationViewItem = LocationViewItem(name: "", coordinate: .init(), website: "")
     let viewModel = AddLocationViewModel(locationFound: locationViewItem, navigator: navigator)
     return AddLocationView(viewModel: viewModel)
 }

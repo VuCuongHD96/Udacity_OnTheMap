@@ -27,13 +27,24 @@ extension FindLocationViewModel: ViewModel {
     class Output: ObservableObject {
         @Published var findButtonStatus = false
         @Published var isWebsiteValid = true
-        @Published var logoDegrees: Double = 0
+        @Published var isLoading = true
         @Published var alertMessage = AlertMessage()
     }
     
     func transform(_ input: Input, cancelBag: CancelBag) -> Output {
         let output = Output()
         let errorTracker = ErrorTracker()
+        let activityTracker = ActivityTracker(false)
+        
+        errorTracker.map { error in
+            AlertMessage(error: error)
+        }
+        .assign(to: \.alertMessage, on: output)
+        .store(in: cancelBag)
+        
+        activityTracker
+            .assign(to: \.isLoading, on: output)
+            .store(in: cancelBag)
         
         errorTracker.map { error in
             AlertMessage(error: error)
@@ -72,8 +83,10 @@ extension FindLocationViewModel: ViewModel {
             .store(in: cancelBag)
         
         input.findLocationAction
-            .flatMap { 
+            .flatMap {
                 GeocoderManager.geocodeAddressString(locationString: input.locationString)
+                    .delay(for: 1, scheduler: DispatchQueue.main)
+                    .trackActivity(activityTracker)
                     .trackError(errorTracker)
                     .asDriver()
             }
@@ -90,20 +103,9 @@ extension FindLocationViewModel: ViewModel {
                 studentInfo.longitude = $0.longitude
             })
             .sink(receiveValue: { location in
-                let locationViewItem = LocationViewItem(name: input.locationString, coordinate: location)
+                let locationViewItem = LocationViewItem(name: input.locationString, coordinate: location, website: input.websiteString)
                 navigator.goToAddLocationScreen(locationViewItem: locationViewItem)
             })
-            .store(in: cancelBag)
-        
-        input.findLocationAction
-            .prefix(1)
-            .flatMap {
-                input.timer
-            }
-            .sink(receiveValue: { _ in
-                output.logoDegrees += 30
-            })
-            
             .store(in: cancelBag)
         
         return output

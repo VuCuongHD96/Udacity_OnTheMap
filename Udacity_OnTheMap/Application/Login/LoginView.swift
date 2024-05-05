@@ -29,15 +29,17 @@ struct LoginView: View {
     var body: some View {
         VStack(spacing: 20) {
             Image("udacity_icon")
-            EmailTextField(emailValue: $input.emailValue)
-            PasswordTextField(passwordValue: $input.passwordValue)
+            TextField("Email", text: $input.emailValue)
+                .modifier(LoginTextFieldModifier())
+            SecureField("Password", text: $input.passwordValue)
+                .modifier(LoginTextFieldModifier())
             Button(action: {
                 input.loginAction.send()
             }, label: {
                 Text("LOGIN")
                     .foregroundColor(.white)
                     .fontWeight(.medium)
-                    .frame(maxWidth: .infinity, maxHeight: 50)
+                    .frame(maxWidth: .infinity, minHeight: 50)
                     .background(output.loginIsValid ? Color.blue : Color.red)
                     .cornerRadius(8)
             })
@@ -50,7 +52,8 @@ struct LoginView: View {
         .padding()
         .padding(.bottom, 100)
         .alert(isPresented: $output.alertMessage.isShowing, content: {
-            Alert(title: Text(output.alertMessage.message))
+            Alert(title: Text(output.alertMessage.title),
+                  message: Text(output.alertMessage.message))
         })
     }
 }
