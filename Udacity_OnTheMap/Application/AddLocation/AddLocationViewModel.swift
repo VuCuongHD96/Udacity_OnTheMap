@@ -24,12 +24,19 @@ extension AddLocationViewModel: ViewModel {
     
     class Output: ObservableObject {
         @Published var locationFound = LocationViewItem()
+        @Published var alertMessage = AlertMessage()
     }
     
     func transform(_ input: Input, cancelBag: CancelBag) -> Output {
         let output = Output()
         let errorTracker = ErrorTracker()
         let activityTracker = ActivityTracker(false)
+        
+        errorTracker.map { error in
+            AlertMessage(error: error)
+        }
+        .assign(to: \.alertMessage, on: output)
+        .store(in: cancelBag)
         
         input.addLocationAction
             .map {

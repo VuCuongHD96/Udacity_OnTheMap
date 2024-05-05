@@ -47,11 +47,11 @@ struct LoginView: View {
                 input.signUpAction.send()
             }
         }
+        .padding()
+        .padding(.bottom, 100)
         .alert(isPresented: $output.alertMessage.isShowing, content: {
             Alert(title: Text(output.alertMessage.message))
         })
-        .padding()
-        .padding(.bottom, 100)
     }
 }
 

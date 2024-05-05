@@ -10,7 +10,7 @@ import MapKit
 
 struct MapViewRepresent: UIViewRepresentable {
 
-    @Binding var openLinkTrigger: String
+    @Binding var openLinkTrigger: String?
     let locationViewItemList: [LocationViewItem]
     
     func updateUIView(_ uiView: MKMapView, context: Context) {

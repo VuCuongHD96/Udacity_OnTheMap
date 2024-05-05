@@ -63,6 +63,9 @@ struct FindLocationView: View {
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .foregroundColor(.red)
                     }
+                    if output.isLoading {
+                        ProgressView()
+                    }
                     findButton
                 }
             }
@@ -70,6 +73,9 @@ struct FindLocationView: View {
             .padding(.top, 150)
             Spacer()
         }
+        .alert(isPresented: $output.alertMessage.isShowing, content: {
+            Alert(title: Text(output.alertMessage.title), message: Text(output.alertMessage.message))
+        })
     }
     
     private var findButton: some View {

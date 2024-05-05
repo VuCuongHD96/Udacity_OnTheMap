@@ -30,6 +30,9 @@ struct LocationListView: View {
                     Text(item.mediaURL)
                         .foregroundStyle(.gray)
                 }
+                .onTapGesture {
+                    input.locationItemSelectedAction.send(item)
+                }
             }
             .listRowSeparator(.visible)
         }
@@ -37,6 +40,9 @@ struct LocationListView: View {
         .onAppear {
             input.loadTrigger.send()
         }
+        .alert(isPresented: $output.alertMessage.isShowing, content: {
+            Alert(title: Text(output.alertMessage.message))
+        })
     }
 }
 

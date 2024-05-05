@@ -1,5 +1,5 @@
 //
-//  CustomDecodingError.swift
+//  UđacityDecodingError.swift
 //  MovieSwiftUI
 //
 //  Created by Work on 24/06/2023.
@@ -7,11 +7,12 @@
 
 import Foundation
 
-struct CustomDecodingError {
+struct UđacityDecodingError {
     var debugDescription: String?
 
     init(error: Error) {
         guard let decodingError = error as? DecodingError else {
+            debugDescription = error.localizedDescription
             return
         }
         switch decodingError {

@@ -18,19 +18,32 @@ extension FindLocationViewModel: ViewModel {
     
     class Input: ObservableObject {
         let backAction = PassthroughSubject<Void, Never>()
-        @Published var locationString = ""
-        @Published var websiteString = ""
+        @Published var locationString = "~~~~~~~~~~~"
+        @Published var websiteString = "http://"
         let findLocationAction = PassthroughSubject<Void, Never>()
     }
     
     class Output: ObservableObject {
         @Published var findButtonStatus = false
         @Published var isWebsiteValid = true
+        @Published var isLoading = true
+        @Published var alertMessage = AlertMessage()
     }
     
     func transform(_ input: Input, cancelBag: CancelBag) -> Output {
         let output = Output()
         let errorTracker = ErrorTracker()
+        let activityTracker = ActivityTracker(false)
+        
+        errorTracker.map { error in
+            AlertMessage(error: error)
+        }
+        .assign(to: \.alertMessage, on: output)
+        .store(in: cancelBag)
+        
+        activityTracker
+            .assign(to: \.isLoading, on: output)
+            .store(in: cancelBag)
         
         input.backAction
             .sink {
@@ -63,8 +76,10 @@ extension FindLocationViewModel: ViewModel {
             .store(in: cancelBag)
         
         input.findLocationAction
-            .flatMap { 
+            .flatMap {
                 GeocoderManager.geocodeAddressString(locationString: input.locationString)
+                    .delay(for: 1, scheduler: DispatchQueue.main)
+                    .trackActivity(activityTracker)
                     .trackError(errorTracker)
                     .asDriver()
             }

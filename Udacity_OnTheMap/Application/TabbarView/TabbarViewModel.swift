@@ -34,9 +34,9 @@ extension TabbarViewModel: ViewModel {
         input.logoutAction
             .flatMap {
                 userUseCase.logout()
-                    .asDriver()
                     .trackError(errorTracker)
                     .trackActivity(activityTracker)
+                    .asDriver()
             }
             .handleEvents(receiveOutput: {
                 studentInfo.clearAllData()
