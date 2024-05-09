@@ -52,6 +52,8 @@ struct FindLocationView: View {
         } bodyContent: {
             VStack(spacing: 30) {
                 Image("icon_world")
+                    .rotationEffect(.degrees(output.logoDegrees))
+                    .animation(.easeInOut, value: output.logoDegrees)
                 VStack(spacing: 15) {
                     TextField("Enter a Location", text: $input.locationString)
                         .modifier(LocationTextFieldModifier())

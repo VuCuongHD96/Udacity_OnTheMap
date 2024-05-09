@@ -38,6 +38,8 @@
 		96901D392BAD32E30094CF2D /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96901D382BAD32E30094CF2D /* LoginResponse.swift */; };
 		96C0E6612BCAD05300B9D175 /* MapCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C0E6602BCAD05300B9D175 /* MapCoordinator.swift */; };
 		96C0E6632BCAD20C00B9D175 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C0E6622BCAD20C00B9D175 /* MapView.swift */; };
+		96C180342BEBC707003500E9 /* Publisher+Unwrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C180332BEBC707003500E9 /* Publisher+Unwrap.swift */; };
+		96C180362BEBC741003500E9 /* OpenURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C180352BEBC741003500E9 /* OpenURL.swift */; };
 		96CD0D902BB309AE00FC1D3C /* LocationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CD0D8F2BB309AE00FC1D3C /* LocationListView.swift */; };
 		96CD0D922BB3103A00FC1D3C /* LocationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CD0D912BB3103A00FC1D3C /* LocationRequest.swift */; };
 		96CD0D942BB310B400FC1D3C /* LocationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96CD0D932BB310B400FC1D3C /* LocationResponse.swift */; };
@@ -109,6 +111,8 @@
 		96901D382BAD32E30094CF2D /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
 		96C0E6602BCAD05300B9D175 /* MapCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCoordinator.swift; sourceTree = "<group>"; };
 		96C0E6622BCAD20C00B9D175 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		96C180332BEBC707003500E9 /* Publisher+Unwrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Publisher+Unwrap.swift"; sourceTree = "<group>"; };
+		96C180352BEBC741003500E9 /* OpenURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenURL.swift; sourceTree = "<group>"; };
 		96CD0D8F2BB309AE00FC1D3C /* LocationListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationListView.swift; sourceTree = "<group>"; };
 		96CD0D912BB3103A00FC1D3C /* LocationRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRequest.swift; sourceTree = "<group>"; };
 		96CD0D932BB310B400FC1D3C /* LocationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationResponse.swift; sourceTree = "<group>"; };
@@ -399,9 +403,11 @@
 			isa = PBXGroup;
 			children = (
 				96D785AE2BAC29F60037248C /* CancelBag.swift */,
+				96C180332BEBC707003500E9 /* Publisher+Unwrap.swift */,
 				96D785AF2BAC29F60037248C /* ErrorTracker.swift */,
 				96D785B02BAC29F60037248C /* ViewModel.swift */,
 				96D785B12BAC29F60037248C /* Driver.swift */,
+				96C180352BEBC741003500E9 /* OpenURL.swift */,
 				96D785B22BAC29F60037248C /* ActivityTracker.swift */,
 				96D785B32BAC29F60037248C /* Observable.swift */,
 			);
@@ -519,6 +525,7 @@
 				9658513D2BCEA928005447EF /* TabbarView.swift in Sources */,
 				96CD0D962BB3115400FC1D3C /* LocationRepository.swift in Sources */,
 				96901D392BAD32E30094CF2D /* LoginResponse.swift in Sources */,
+				96C180362BEBC741003500E9 /* OpenURL.swift in Sources */,
 				96D785AC2BAC29660037248C /* BaseError.swift in Sources */,
 				96C0E6612BCAD05300B9D175 /* MapCoordinator.swift in Sources */,
 				96D785B52BAC29F60037248C /* ErrorTracker.swift in Sources */,
@@ -549,6 +556,7 @@
 				96C0E6632BCAD20C00B9D175 /* MapView.swift in Sources */,
 				96D7857A2BAC21CA0037248C /* AppNavigator.swift in Sources */,
 				962C13FD2BE28CFF00BB659E /* GeocoderManager.swift in Sources */,
+				96C180342BEBC707003500E9 /* Publisher+Unwrap.swift in Sources */,
 				96D785B72BAC29F60037248C /* Driver.swift in Sources */,
 				960C10C72BE47F130070B584 /* AddLocationViewModel.swift in Sources */,
 				960C10CF2BE492950070B584 /* AddLocationResponse.swift in Sources */,
