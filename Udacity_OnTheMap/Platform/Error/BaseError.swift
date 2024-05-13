@@ -7,12 +7,14 @@
 
 import Foundation
 
-enum BaseError: Error {
+public enum BaseError: Error {
     case networkError
     case httpError(httpCode: Int)
     case unexpectedError
     case redirectionError
     case errorParsing(Error)
+    case locationError
+    case loginError
 
     struct Errors {
         static let networkError = "Network Error"
@@ -22,6 +24,8 @@ enum BaseError: Error {
         static let clientError = "An error occurred on the application side. Please try again later!"
         static let serverError = "A server error occurred. Please try again later!"
         static let unofficalError = "An error occurred. Please try again later!"
+        static let locationError = "Can not find your location!"
+        static let loginError = "Can not login, please check your user name & password"
     }
 
     var title: String {
@@ -33,9 +37,13 @@ enum BaseError: Error {
         case .unexpectedError:
             return "unexpectedError"
         case.redirectionError:
-            return "redirectionError"
+            return "Redirection Error"
         case .errorParsing:
             return "errorParsing"
+        case .locationError:
+            return "Location Error"
+        case .loginError:
+            return "Login Error"
         }
     }
 
@@ -48,8 +56,12 @@ enum BaseError: Error {
         case .redirectionError:
             return Errors.redirectionError
         case .errorParsing(let error):
-            let movieDecodingError = CustomDecodingError(error: error)
+            let movieDecodingError = UđacityDecodingError(error: error)
             return movieDecodingError.debugDescription
+        case .locationError:
+            return Errors.locationError
+        case .loginError:
+            return Errors.loginError
         default:
             return Errors.unexpectedError
         }

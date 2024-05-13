@@ -14,6 +14,7 @@
 		960C10CB2BE48F140070B584 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960C10CA2BE48F140070B584 /* UserData.swift */; };
 		960C10CD2BE48F4B0070B584 /* StudentInfoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960C10CC2BE48F4B0070B584 /* StudentInfoData.swift */; };
 		960C10CF2BE492950070B584 /* AddLocationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 960C10CE2BE492950070B584 /* AddLocationResponse.swift */; };
+		9612FB7A2BF262D4009DE008 /* LoginTextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9612FB792BF262D4009DE008 /* LoginTextFieldModifier.swift */; };
 		962C13FD2BE28CFF00BB659E /* GeocoderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962C13FC2BE28CFF00BB659E /* GeocoderManager.swift */; };
 		962CBD8F2BD9472000FFC362 /* FindLocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962CBD8E2BD9472000FFC362 /* FindLocationView.swift */; };
 		9649EDBC2BD7F7990019B741 /* UserInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9649EDBB2BD7F7990019B741 /* UserInfoResponse.swift */; };
@@ -87,6 +88,7 @@
 		960C10CA2BE48F140070B584 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		960C10CC2BE48F4B0070B584 /* StudentInfoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentInfoData.swift; sourceTree = "<group>"; };
 		960C10CE2BE492950070B584 /* AddLocationResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationResponse.swift; sourceTree = "<group>"; };
+		9612FB792BF262D4009DE008 /* LoginTextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextFieldModifier.swift; sourceTree = "<group>"; };
 		962C13FC2BE28CFF00BB659E /* GeocoderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeocoderManager.swift; sourceTree = "<group>"; };
 		962CBD8E2BD9472000FFC362 /* FindLocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindLocationView.swift; sourceTree = "<group>"; };
 		9649EDBB2BD7F7990019B741 /* UserInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoResponse.swift; sourceTree = "<group>"; };
@@ -317,6 +319,7 @@
 				96D785692BAC1D790037248C /* LoginView.swift */,
 				96901D302BAD305F0094CF2D /* LoginNavigator.swift */,
 				96901D322BAD306C0094CF2D /* UserUseCase.swift */,
+				9612FB792BF262D4009DE008 /* LoginTextFieldModifier.swift */,
 				9652CDD42BAC851F00D49652 /* PasswordTextField.swift */,
 				9652CDD22BAC850200D49652 /* EmailTextField.swift */,
 				96D7857E2BAC23200037248C /* LoginViewModel.swift */,
@@ -552,6 +555,7 @@
 				96CD0D922BB3103A00FC1D3C /* LocationRequest.swift in Sources */,
 				96CD0D902BB309AE00FC1D3C /* LocationListView.swift in Sources */,
 				96D7859B2BAC29660037248C /* ServiceBaseRepository.swift in Sources */,
+				9612FB7A2BF262D4009DE008 /* LoginTextFieldModifier.swift in Sources */,
 				9609D7F22BD5606F00A7589F /* TabbarNavigator.swift in Sources */,
 				96C0E6632BCAD20C00B9D175 /* MapView.swift in Sources */,
 				96D7857A2BAC21CA0037248C /* AppNavigator.swift in Sources */,

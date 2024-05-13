@@ -13,7 +13,7 @@ struct MemeTextField: View {
     @Binding var textValue: String
     
     var body: some View {
-        TextField(placeHolder, text: $textValue)
+        SecureField(placeHolder, text: $textValue)
             .padding(.horizontal, 8)
             .padding(.vertical, 6)
             .cornerRadius(8)

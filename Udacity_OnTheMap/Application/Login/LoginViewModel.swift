@@ -58,6 +58,7 @@ extension LoginViewModel: ViewModel {
             .store(in: cancelBag)
 
         input.loginAction
+            .prefix(1)
             .map { _ in
                 return UserData(email: input.emailValue, password: input.passwordValue)
             }

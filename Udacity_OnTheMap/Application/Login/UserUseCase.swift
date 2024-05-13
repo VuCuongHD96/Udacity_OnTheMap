@@ -19,6 +19,10 @@ struct UserUseCase: UserUseCaseType {
     
     func login(user: UserData) -> Observable<LoginResponse> {
         return userRepository.login(user: user)
+            .mapError { _ in
+                BaseError.loginError
+            }
+            .eraseToAnyPublisher()
     }
     
     func logout() -> Observable<Void> {

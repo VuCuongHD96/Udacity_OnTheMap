@@ -52,8 +52,6 @@ struct FindLocationView: View {
         } bodyContent: {
             VStack(spacing: 30) {
                 Image("icon_world")
-                    .rotationEffect(.degrees(output.logoDegrees))
-                    .animation(.easeInOut, value: output.logoDegrees)
                 VStack(spacing: 15) {
                     TextField("Enter a Location", text: $input.locationString)
                         .modifier(LocationTextFieldModifier())
@@ -65,6 +63,9 @@ struct FindLocationView: View {
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .foregroundColor(.red)
                     }
+                    if output.isLoading {
+                        ProgressView()
+                    }
                     findButton
                 }
             }
@@ -72,6 +73,9 @@ struct FindLocationView: View {
             .padding(.top, 150)
             Spacer()
         }
+        .alert(isPresented: $output.alertMessage.isShowing, content: {
+            Alert(title: Text(output.alertMessage.title), message: Text(output.alertMessage.message))
+        })
     }
     
     private var findButton: some View {

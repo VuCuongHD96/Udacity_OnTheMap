@@ -22,7 +22,8 @@ struct MapView: View {
         MapViewRepresent(openLinkTrigger: $input.openLinkTrigger,
                          locationViewItemList: output.locationViewItemList)
         .alert(isPresented: $output.alertMessage.isShowing, content: {
-            Alert(title: Text(output.alertMessage.message))
+            Alert(title: Text(output.alertMessage.title),
+                  message: Text(output.alertMessage.message))
         })
         .onAppear {
             input.loadTrigger.send()

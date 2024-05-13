@@ -30,9 +30,13 @@ extension AlertMessage {
     }
     
     init(error: Error) {
-        let title = "Error!"
-        let message = error.localizedDescription
-        let isShowing = !message.isEmpty
-        self.init(title: title, message: message, isShowing: isShowing)
+        if let baseError = error as? BaseError {
+            self.init(error: baseError)
+        } else {
+            let title = "Error!"
+            let message = error.localizedDescription
+            let isShowing = !message.isEmpty
+            self.init(title: title, message: message, isShowing: isShowing)
+        }
     }
 }
