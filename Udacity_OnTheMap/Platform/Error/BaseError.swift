@@ -15,6 +15,7 @@ public enum BaseError: Error {
     case errorParsing(Error)
     case locationError
     case loginError
+    case internetError
 
     struct Errors {
         static let networkError = "Network Error"
@@ -26,6 +27,7 @@ public enum BaseError: Error {
         static let unofficalError = "An error occurred. Please try again later!"
         static let locationError = "Can not find your location!"
         static let loginError = "Can not login, please check your user name & password"
+        static let internetError = "The Internet connection appears to be offline."
     }
 
     var title: String {
@@ -44,6 +46,8 @@ public enum BaseError: Error {
             return "Location Error"
         case .loginError:
             return "Login Error"
+        case .internetError:
+            return "Internet Error"
         }
     }
 
@@ -62,6 +66,8 @@ public enum BaseError: Error {
             return Errors.locationError
         case .loginError:
             return Errors.loginError
+        case .internetError:
+            return Errors.internetError
         default:
             return Errors.unexpectedError
         }

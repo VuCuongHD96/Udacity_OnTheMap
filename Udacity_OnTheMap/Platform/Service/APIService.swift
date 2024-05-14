@@ -57,7 +57,11 @@ struct APIService {
             }
             .decode(type: T.self, decoder: JSONDecoder())
             .mapError { error in
-                return BaseError.errorParsing(error)
+                if error.localizedDescription == BaseError.Errors.internetError {
+                    return BaseError.internetError
+                } else {
+                    return BaseError.errorParsing(error)
+                }
             }
             .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()
