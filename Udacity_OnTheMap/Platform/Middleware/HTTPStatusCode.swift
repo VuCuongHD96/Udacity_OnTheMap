@@ -22,6 +22,7 @@ enum HTTPStatusCode: Int, Error {
         case serverError
         /// - undefined: The class of the status code cannot be resolved.
         case undefined
+        case loginError
     }
     //
     // Informational - 1xx
@@ -179,6 +180,8 @@ enum HTTPStatusCode: Int, Error {
             return .success
         case 300..<400:
             return .redirection
+        case 403:
+            return .loginError
         case 400..<500:
             return .clientError
         case 500..<600:
