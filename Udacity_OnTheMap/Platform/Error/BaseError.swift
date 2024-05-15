@@ -26,7 +26,7 @@ public enum BaseError: Error {
         static let serverError = "A server error occurred. Please try again later!"
         static let unofficalError = "An error occurred. Please try again later!"
         static let locationError = "Can not find your location!"
-        static let loginError = "Can not login, please check your user name & password"
+        static let loginError = "The credentials were incorrect, please check your email or/and your password."
         static let internetError = "The Internet connection appears to be offline."
     }
 
@@ -35,7 +35,7 @@ public enum BaseError: Error {
         case .networkError:
             return "networkError"
         case .httpError:
-            return "httpError"
+            return "Http Error"
         case .unexpectedError:
             return "unexpectedError"
         case.redirectionError:
@@ -77,6 +77,8 @@ public enum BaseError: Error {
         switch HTTPStatusCode(rawValue: httpCode)?.responseType {
         case .redirection?:
             return Errors.redirectionError
+        case .loginError:
+            return Errors.loginError
         case .clientError?:
             return Errors.clientError
         case .serverError?:
